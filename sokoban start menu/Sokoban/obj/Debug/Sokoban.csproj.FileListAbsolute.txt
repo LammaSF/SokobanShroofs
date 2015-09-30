@@ -1,0 +1,6 @@
+c:\users\ivan\documents\visual studio 2015\Projects\Sokoban\Sokoban\bin\Debug\Sokoban.exe.config
+c:\users\ivan\documents\visual studio 2015\Projects\Sokoban\Sokoban\bin\Debug\Sokoban.exe
+c:\users\ivan\documents\visual studio 2015\Projects\Sokoban\Sokoban\bin\Debug\Sokoban.pdb
+c:\users\ivan\documents\visual studio 2015\Projects\Sokoban\Sokoban\obj\Debug\Sokoban.exe
+c:\users\ivan\documents\visual studio 2015\Projects\Sokoban\Sokoban\obj\Debug\Sokoban.pdb
+c:\users\ivan\documents\visual studio 2015\Projects\Sokoban\Sokoban\obj\Debug\Sokoban.csprojResolveAssemblyReference.cache
