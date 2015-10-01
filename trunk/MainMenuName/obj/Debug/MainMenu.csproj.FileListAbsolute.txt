@@ -1,0 +1,6 @@
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanShroofs\MainMenu\bin\Debug\MainMenu.exe.config
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanShroofs\MainMenu\bin\Debug\MainMenu.exe
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanShroofs\MainMenu\bin\Debug\MainMenu.pdb
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanShroofs\MainMenu\obj\Debug\MainMenu.csprojResolveAssemblyReference.cache
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanShroofs\MainMenu\obj\Debug\MainMenu.exe
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanShroofs\MainMenu\obj\Debug\MainMenu.pdb
