@@ -8,7 +8,7 @@ namespace Sokoban
         public static int counter = 0;
         static void Main(string[] args)
         {
-            
+
             MainMenuPrint(ref counter);
         }
 
@@ -23,13 +23,22 @@ namespace Sokoban
 
         public static void MainMenuPrint(ref int counter)
         {
-            Console.WriteLine("{0} {1} H{2}H", new string('H', 5), new string('H', 5), new string (' ', 3) );
-
-            Console.WriteLine("{0}     H{1}H H  H", new string('H', 1), new string(' ', 3));
-            Console.WriteLine("{0} H{1}H H H", new string('H', 5), new string(' ', 3));
-            Console.WriteLine("{0}{1} H{2}H H  H", new string(' ', 4), new string('H', 1), new string(' ', 3));
-            Console.WriteLine("{0} {1} H   H", new string('H', 5), new string('H', 5));
-           // Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine();
+            string name = new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('s', 5) + " " + new string('o', 5) + " k" + new string(' ', 3) + "k " + 
+      new string('o', 5) + " " + new string('b', 4) + "   " + new string('a', 3) + "  n   n" + "\n"
+                + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('s', 1) + "     o" + new string(' ', 3) + "o k  k  o   o b   b a   a nn  n\n"
+                + new string(' ', Console.WindowWidth / 2 - 42 / 2)+new string('s', 5)+" o"+new string(' ', 3)+"o kkk   o   o "+new string('b',4)+"  "+new string('a',5)+" n n n\n"
+                +new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string(' ', 4) + new string('s', 1) + " o" + new string(' ', 3) + "o k  k  o   o b   b a   a n  nn\n"
+                + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('s', 5) +" "+ new string('o', 5) +" k   k "+ new string('o', 5) +" "+ new string('b', 4) + "  a   a n   n";
+            Console.WriteLine("{0}", name);
+            //Console.WriteLine("{0} {1} k{2}k {3} {4}   {5}  n   n \n{6}     o{7}o k  k  o   o b   b a   a nn  n\n{8} o{9}o kkk   o   o {10}  {11} n n n\n{12}{13} o{14}o k  k  o   o b   b a   a n  nn\n{15} {16} k   k {17} {18}  a   a n   n", 
+            //                                   new string('s', 5), new string('o', 5), new string(' ', 3), new string('o', 5), new string('b', 4), new string('a', 3),
+            //                                   new string('s', 1), new string(' ', 3),
+            //                                   new string('s', 5), new string(' ', 3), new string('b',4), new string('a',5),
+            //                                   new string(' ', 4), new string('s', 1), new string(' ', 3),
+            //                                   new string('s', 5), new string('o', 5), new string('o', 5), new string('b', 4));
+            // Console.Clear();
             Console.WriteLine();
             Console.WriteLine();
 
@@ -124,20 +133,28 @@ namespace Sokoban
             while (true)        // if someone finds a way to make the "are you sure" prompt appear in the middle as in the example above without breaking the code pls do
             {
 
-                
+
                 for (int i = 0; i < 4; i++)
                 {
                     Console.WriteLine();
                 }
-                Console.WriteLine("Are you sure you want to quit? (Y/N)");
+                string prompt = "Are you sure you want to quit? (Y/N)";
+                Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (prompt.Length / 2)) + "}", prompt);
                 ConsoleKeyInfo result = Console.ReadKey(true);
-                if ((result.KeyChar == 'Y') || (result.KeyChar == 'y'))
+                
+               
+                    if (result.Key == ConsoleKey.Y)
+                    {
+                        Environment.Exit(0);
+                        break;
+
+                    }
+                
+                else if (result.Key == ConsoleKey.N)
                 {
-                    Process.GetCurrentProcess().Kill();
-                }
-                else if ((result.KeyChar == 'N') || (result.KeyChar == 'n'))
-                {
+                    Console.Clear();
                     MainMenuPrint(ref counter);
+                   
                 }
             }
 
