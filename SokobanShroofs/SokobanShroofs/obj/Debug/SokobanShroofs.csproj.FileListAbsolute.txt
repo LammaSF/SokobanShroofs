@@ -4,3 +4,9 @@ E:\C# Projects\SokobanShroofs\SokobanShroofs\bin\Debug\SokobanShroofs.pdb
 E:\C# Projects\SokobanShroofs\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache
 E:\C# Projects\SokobanShroofs\SokobanShroofs\obj\Debug\SokobanShroofs.exe
 E:\C# Projects\SokobanShroofs\SokobanShroofs\obj\Debug\SokobanShroofs.pdb
+E:\C# Projects\SokobanShroofs.git\trunk\SokobanShroofs\SokobanShroofs\bin\Debug\SokobanShroofs.exe.config
+E:\C# Projects\SokobanShroofs.git\trunk\SokobanShroofs\SokobanShroofs\obj\Debug\SokobanShroofs.exe
+E:\C# Projects\SokobanShroofs.git\trunk\SokobanShroofs\SokobanShroofs\obj\Debug\SokobanShroofs.pdb
+E:\C# Projects\SokobanShroofs.git\trunk\SokobanShroofs\SokobanShroofs\bin\Debug\SokobanShroofs.exe
+E:\C# Projects\SokobanShroofs.git\trunk\SokobanShroofs\SokobanShroofs\bin\Debug\SokobanShroofs.pdb
+E:\C# Projects\SokobanShroofs.git\trunk\SokobanShroofs\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache

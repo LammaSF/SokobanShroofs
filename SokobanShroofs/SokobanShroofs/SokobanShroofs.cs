@@ -6,7 +6,7 @@ namespace SokobanShroofs
     {
 
         public static Coordinate Hero { get; set; }
-        public static Coordinate Ball { get; set; }
+        public static Coordinate[] Balls = new Coordinate[5];
 
         static void Main(string[] args)
         {
@@ -16,66 +16,101 @@ namespace SokobanShroofs
             ConsoleKeyInfo keyInfo;
             while ((keyInfo = Console.ReadKey(true)).Key != ConsoleKey.Escape)
             {
+                int ballToMove = Balls.Length;
                 switch (keyInfo.Key)
                 {
                     case ConsoleKey.UpArrow:
-                        MoveHero(0, -1);
-                        if (BallInWay(Ball))
+                        for (int i = 0; i < Balls.Length; i++)
                         {
-                            MoveBall(0, -1);
+                            if (BallInWay(Balls[i], 0, -1))
+                            {
+                                ballToMove = i;
+                                break;
+                            }
                         }
+                        MoveHero(0, -1, ballToMove);
+                        MoveBall(0, -1, ballToMove);
                         break;
 
                     case ConsoleKey.RightArrow:
-                        MoveHero(1, 0);
-                        if (BallInWay(Ball))
+                        for (int i = 0; i < Balls.Length; i++)
                         {
-                            MoveBall(1, 0);
+                            if (BallInWay(Balls[i], 1, 0))
+                            {
+                                ballToMove = i;
+                                break;
+                            }
                         }
+                        MoveHero(1, 0, ballToMove);
+                        MoveBall(1, 0, ballToMove);
                         break;
 
                     case ConsoleKey.DownArrow:
-                        MoveHero(0, 1);
-                        if (BallInWay(Ball))
+                        for (int i = 0; i < Balls.Length; i++)
                         {
-                            MoveBall(0, 1);
+                            if (BallInWay(Balls[i], 0, 1))
+                            {
+                                ballToMove = i;
+                                break;
+                            }
                         }
+                        MoveHero(0, 1, ballToMove);
+                        MoveBall(0, 1, ballToMove);
                         break;
 
                     case ConsoleKey.LeftArrow:
-                        MoveHero(-1, 0);
-                        if (BallInWay(Ball))
+                        for (int i = 0; i < Balls.Length; i++)
                         {
-                            MoveBall(-1, 0);
+                            if (BallInWay(Balls[i], -1, 0))
+                            {
+                                ballToMove = i;
+                                break;
+                            }
                         }
+                        MoveHero(-1, 0, ballToMove);
+                        MoveBall(-1, 0, ballToMove);
                         break;
                 }
             }
         }
 
-        static void MoveHero(int x, int y)
+        static void MoveHero(int x, int y, int i)
         {
             Coordinate newHero = new Coordinate()
             {
                 X = Hero.X + x,
                 Y = Hero.Y + y
             };
-
-            if ((Ball.X == Hero.X + 1 && Ball.Y == Hero.Y) || (Ball.X == Hero.X - 1 && Ball.Y == Hero.Y) || (Ball.X == Hero.X && Ball.Y == Hero.Y + 1) || (Ball.X == Hero.X && Ball.Y == Hero.Y - 1))
+            if (i != Balls.Length)
             {
-                Coordinate newBall = new Coordinate()
+                if ((Balls[i].X == Hero.X + 1 && Balls[i].Y == Hero.Y) || (Balls[i].X == Hero.X - 1 && Balls[i].Y == Hero.Y) || (Balls[i].X == Hero.X && Balls[i].Y == Hero.Y + 1) || (Balls[i].X == Hero.X && Balls[i].Y == Hero.Y - 1))
                 {
-                    X = Ball.X + x,
-                    Y = Ball.Y + y
-                };
-                if (CanMove(newHero) && CanMove(newBall))
+                    Coordinate newBall = new Coordinate()
+                    {
+                        X = Balls[i].X + x,
+                        Y = Balls[i].Y + y
+                    };
+                    if (CanMove(newHero) && CanMoveBall(newBall, i))
+                    {
+                        RemoveHero();
+
+                        Console.SetCursorPosition(newHero.X, newHero.Y);
+                        Console.Write("@");
+
+                        Hero = newHero;
+                    }
+                }
+                else
                 {
-                    RemoveHero();
+                    if (CanMove(newHero))
+                    {
+                        RemoveHero();
 
-                    Console.SetCursorPosition(newHero.X, newHero.Y);
-                    Console.Write("@");
+                        Console.SetCursorPosition(newHero.X, newHero.Y);
+                        Console.Write("@");
 
-                    Hero = newHero;
+                        Hero = newHero;
+                    }
                 }
             }
             else
@@ -91,21 +126,24 @@ namespace SokobanShroofs
                 }
             }
         }
-        static void MoveBall(int x, int y)
+        static void MoveBall(int x, int y, int i)
         {
-            Coordinate newBall = new Coordinate()
+            if (i != Balls.Length)
             {
-                X = Ball.X + x,
-                Y = Ball.Y + y
-            };
-            if (CanMove(newBall))
-            {
-                RemoveBall();
+                Coordinate newBall = new Coordinate()
+                {
+                    X = Balls[i].X + x,
+                    Y = Balls[i].Y + y
+                };
+                if (CanMoveBall(newBall, i))
+                {
+                    RemoveBall(i);
 
-                Console.SetCursorPosition(newBall.X, newBall.Y);
-                Console.Write("*");
+                    Console.SetCursorPosition(newBall.X, newBall.Y);
+                    Console.Write("*");
 
-                Ball = newBall;
+                    Balls[i] = newBall;
+                }
             }
         }
         static void RemoveHero()
@@ -113,11 +151,11 @@ namespace SokobanShroofs
             Console.SetCursorPosition(Hero.X, Hero.Y);
             Console.Write(" ");
         }
-        static void RemoveBall()
+        static void RemoveBall(int i)
         {
-            if (Ball.X != Hero.X && Ball.Y != Hero.Y)
+            if (Balls[i].X != Hero.X && Balls[i].Y != Hero.Y)
             {
-                Console.SetCursorPosition(Ball.X, Ball.Y);
+                Console.SetCursorPosition(Balls[i].X, Balls[i].Y);
                 Console.Write(" ");
             }
         }
@@ -131,9 +169,30 @@ namespace SokobanShroofs
 
             return true;
         }
-        static bool BallInWay(Coordinate c)
+        static bool CanMoveBall(Coordinate c, int i)
         {
-            if (c.X == Hero.X && c.Y == Hero.Y)
+            if (c.X < 1 || c.X >= 17)
+                return false;
+
+            if (c.Y < 1 || c.Y >= 14)
+                return false;
+            for (int j = 0; j < Balls.Length; j++)
+            {
+                if (j == i)
+                {
+                    continue;
+                }
+                else if (c.X == Balls[j].X && c.Y == Balls[j].Y)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        static bool BallInWay(Coordinate c, int x, int y)
+        {
+            if (c.X == Hero.X + x && c.Y == Hero.Y + y)
                 return true;
             return false;
         }
@@ -146,13 +205,17 @@ namespace SokobanShroofs
                 X = 1,
                 Y = 1
             };
-            Ball = new Coordinate()
+            for (int i = 0; i < Balls.Length; i++)
             {
-                X = 3,
-                Y = 3
-            };
-            MoveHero(0, 0);
-            MoveBall(0, 0);
+                Balls[i] = new Coordinate()
+                {
+                    X = i + 2,
+                    Y = i + 2
+                };
+                Console.SetCursorPosition(Balls[i].X, Balls[i].Y);
+                Console.Write("*");
+            }
+            MoveHero(0, 0, Balls.Length);
         }
         static void DrawLevel()
         {
