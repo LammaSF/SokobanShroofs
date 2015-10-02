@@ -7,6 +7,7 @@ namespace SokobanShroofs
 
         public static Coordinate Hero { get; set; }
         public static Coordinate[] Balls = new Coordinate[5];
+        public static char[,] level = new char[15, 18];
 
         static void Main(string[] args)
         {
@@ -128,6 +129,7 @@ namespace SokobanShroofs
         }
         static void MoveBall(int x, int y, int i)
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             if (i != Balls.Length)
             {
                 Coordinate newBall = new Coordinate()
@@ -145,6 +147,7 @@ namespace SokobanShroofs
                     Balls[i] = newBall;
                 }
             }
+            Console.ResetColor();
         }
         static void RemoveHero()
         {
@@ -161,21 +164,31 @@ namespace SokobanShroofs
         }
         static bool CanMove(Coordinate c)
         {
-            if (c.X < 1 || c.X >= 17)
-                return false;
-
-            if (c.Y < 1 || c.Y >= 14)
-                return false;
-
+            for (int i = 0; i < 15; i++)
+            {
+                for (int j = 0; j < 18; j++)
+                {
+                    if (level[i, j] == '#' && c.X == i && c.Y == j)
+                    {
+                        return false;
+                    }
+                }
+            }
             return true;
         }
         static bool CanMoveBall(Coordinate c, int i)
         {
-            if (c.X < 1 || c.X >= 17)
-                return false;
+            for (int m = 0; m < 15; m++)
+            {
+                for (int n = 0; n < 18; n++)
+                {
+                    if (level[m, n] == '#' && c.X == m && c.Y == n)
+                    {
+                        return false;
+                    }
+                }
+            }
 
-            if (c.Y < 1 || c.Y >= 14)
-                return false;
             for (int j = 0; j < Balls.Length; j++)
             {
                 if (j == i)
@@ -212,15 +225,18 @@ namespace SokobanShroofs
                     X = i + 2,
                     Y = i + 2
                 };
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.SetCursorPosition(Balls[i].X, Balls[i].Y);
                 Console.Write("*");
+                Console.ResetColor();
             }
             MoveHero(0, 0, Balls.Length);
         }
         static void DrawLevel()
         {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(0, 0);
-            char[,] level = new char[15, 18];
             for (int i = 0; i < 15; i++)
             {
                 for (int j = 0; j < 18; j++)
@@ -231,12 +247,29 @@ namespace SokobanShroofs
                         Console.SetCursorPosition(j, i);
                         Console.Write('#');
                     }
-                    else
-                    {
-                        Console.SetCursorPosition(j, i + 1);
-                    }
                 }
             }
+            level[8, 8] = '#';
+            Console.SetCursorPosition(8, 8);
+            Console.Write('#');
+            level[8, 9] = '#';
+            Console.SetCursorPosition(8, 9);
+            Console.Write('#');
+            level[8, 10] = '#';
+            Console.SetCursorPosition(8, 10);
+            Console.Write('#');
+
+            level[7, 3] = '#';
+            Console.SetCursorPosition(7, 3);
+            Console.Write('#');
+            level[8, 3] = '#';
+            Console.SetCursorPosition(8, 3);
+            Console.Write('#');
+            level[9, 3] = '#';
+            Console.SetCursorPosition(9, 3);
+            Console.Write('#');
+            
+            Console.ResetColor();
         }
         static void ResizeWindow()
         {
