@@ -7,6 +7,7 @@ namespace SokobanShroofs
 
         public static Coordinate Hero { get; set; }
         public static Coordinate[] Balls = new Coordinate[5];
+        public static Coordinate[] Targets = new Coordinate[5];
         public static char[,] level = new char[15, 18];
 
         static void Main(string[] args)
@@ -77,6 +78,7 @@ namespace SokobanShroofs
 
         static void MoveHero(int x, int y, int i)
         {
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Coordinate newHero = new Coordinate()
             {
                 X = Hero.X + x,
@@ -96,7 +98,18 @@ namespace SokobanShroofs
                         RemoveHero();
 
                         Console.SetCursorPosition(newHero.X, newHero.Y);
-                        Console.Write("@");
+                        if (level[newHero.Y, newHero.X] == 'O')
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                            Console.BackgroundColor = ConsoleColor.Gray;
+                            Console.Write("@");
+                            Console.ResetColor();
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                            Console.Write("@");
+                        }
 
                         Hero = newHero;
                     }
@@ -108,7 +121,18 @@ namespace SokobanShroofs
                         RemoveHero();
 
                         Console.SetCursorPosition(newHero.X, newHero.Y);
-                        Console.Write("@");
+                        if (level[newHero.Y, newHero.X] == 'O')
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                            Console.BackgroundColor = ConsoleColor.Gray;
+                            Console.Write("@");
+                            Console.ResetColor();
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                            Console.Write("@");
+                        }
 
                         Hero = newHero;
                     }
@@ -121,15 +145,27 @@ namespace SokobanShroofs
                     RemoveHero();
 
                     Console.SetCursorPosition(newHero.X, newHero.Y);
-                    Console.Write("@");
+                    if (level[newHero.Y, newHero.X] == 'O')
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                        Console.BackgroundColor = ConsoleColor.Gray;
+                        Console.Write("@");
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                        Console.Write("@");
+                    }
 
                     Hero = newHero;
                 }
             }
+            Console.ResetColor();
         }
         static void MoveBall(int x, int y, int i)
         {
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             if (i != Balls.Length)
             {
                 Coordinate newBall = new Coordinate()
@@ -142,7 +178,16 @@ namespace SokobanShroofs
                     RemoveBall(i);
 
                     Console.SetCursorPosition(newBall.X, newBall.Y);
-                    Console.Write("*");
+                    if (level[newBall.Y, newBall.X] == 'O')
+                    {
+                        Console.BackgroundColor = ConsoleColor.Gray;
+                        Console.Write("*");
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        Console.Write("*");
+                    }
 
                     Balls[i] = newBall;
                 }
@@ -151,8 +196,19 @@ namespace SokobanShroofs
         }
         static void RemoveHero()
         {
-            Console.SetCursorPosition(Hero.X, Hero.Y);
-            Console.Write(" ");
+            if (level[Hero.Y, Hero.X] == 'O')
+            {
+                Console.BackgroundColor = ConsoleColor.Gray;
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.SetCursorPosition(Hero.X, Hero.Y);
+                Console.WriteLine("O");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.SetCursorPosition(Hero.X, Hero.Y);
+                Console.Write(" ");
+            }
         }
         static void RemoveBall(int i)
         {
@@ -168,7 +224,7 @@ namespace SokobanShroofs
             {
                 for (int j = 0; j < 18; j++)
                 {
-                    if (level[i, j] == '#' && c.X == i && c.Y == j)
+                    if (level[i, j] == '#' && c.Y == i && c.X == j)
                     {
                         return false;
                     }
@@ -182,7 +238,7 @@ namespace SokobanShroofs
             {
                 for (int n = 0; n < 18; n++)
                 {
-                    if (level[m, n] == '#' && c.X == m && c.Y == n)
+                    if (level[m, n] == '#' && c.Y == m && c.X == n)
                     {
                         return false;
                     }
@@ -225,7 +281,7 @@ namespace SokobanShroofs
                     X = i + 2,
                     Y = i + 2
                 };
-                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.SetCursorPosition(Balls[i].X, Balls[i].Y);
                 Console.Write("*");
                 Console.ResetColor();
@@ -234,7 +290,7 @@ namespace SokobanShroofs
         }
         static void DrawLevel()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.Black;
             Console.BackgroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(0, 0);
             for (int i = 0; i < 15; i++)
@@ -253,22 +309,42 @@ namespace SokobanShroofs
             Console.SetCursorPosition(8, 8);
             Console.Write('#');
             level[8, 9] = '#';
-            Console.SetCursorPosition(8, 9);
+            Console.SetCursorPosition(9, 8);
             Console.Write('#');
             level[8, 10] = '#';
-            Console.SetCursorPosition(8, 10);
+            Console.SetCursorPosition(10, 8);
             Console.Write('#');
 
             level[7, 3] = '#';
-            Console.SetCursorPosition(7, 3);
+            Console.SetCursorPosition(3, 7);
             Console.Write('#');
             level[8, 3] = '#';
-            Console.SetCursorPosition(8, 3);
+            Console.SetCursorPosition(3, 8);
             Console.Write('#');
             level[9, 3] = '#';
-            Console.SetCursorPosition(9, 3);
+            Console.SetCursorPosition(3, 9);
             Console.Write('#');
-            
+
+            Console.ResetColor();
+
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
+            level[9, 8] = 'O';
+            Console.SetCursorPosition(8, 9);
+            Console.Write('O');
+            level[9, 9] = 'O';
+            Console.SetCursorPosition(9, 9);
+            Console.Write('O');
+            level[9, 10] = 'O';
+            Console.SetCursorPosition(10, 9);
+            Console.Write('O');
+            level[7, 2] = 'O';
+            Console.SetCursorPosition(2, 7);
+            Console.Write('O');
+            level[8, 2] = 'O';
+            Console.SetCursorPosition(2, 8);
+            Console.Write('O');
+
             Console.ResetColor();
         }
         static void ResizeWindow()
@@ -276,6 +352,7 @@ namespace SokobanShroofs
             Console.SetWindowSize(18, 15);
             Console.SetBufferSize(18, 15);
         }
+        
      }
 
     class Coordinate
