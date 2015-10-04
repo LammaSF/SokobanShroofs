@@ -110,7 +110,7 @@ namespace Sokoban
                 case 0:
                     break;
                 case 1:
-                    HighScore();
+                    PrintHighScore();
                     break;
                 case 2:
                     break;
@@ -176,19 +176,38 @@ namespace Sokoban
 
         }
 
-        private static void HighScore()
+        public static string TitleHighScore =
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h"+ new string(' ', 3) +"h"+ " " + new string('i', 5) + " " + new string('g', 5) + " " +
+            "h" + new string(' ', 3) + "h" + " "  + "\n"+ 
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2)+"i" + new string(' ', 2) +" "+ "g"+ new string(' ', 3) +"g"+" "+"h"+ new string(' ', 3) +"h"+ "\n"+ 
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('h', 5) + " " + new string(' ', 2) + "i"+ new string(' ', 2)+" " +"g"+ new string(' ', 4) + " " + new string('h', 5) + "\n"+
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) +"h"+new string(' ', 3) +"h"+" "+ new string(' ', 2) + "i" + new string(' ', 2) +" "+ "g"+" "+new string('g', 3)+" "+"h"+new string(' ', 3)+"h"+"\n"+
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) +"h"+ new string(' ', 3) +"h"+" "+ new string('i', 5) + " " + new string('g', 5) + " " +"h"+ new string(' ', 3) +"h"+"\n"+
+            Environment.NewLine+
+            new string(' ', Console.WindowWidth / 2+2) + "h"+ new string(' ', 3) +"h"+ " " + new string('i', 5) + " " + new string('g', 5) + " " +
+            "h" + new string(' ', 3) + "h" + " "  + "\n"+ 
+            new string(' ', Console.WindowWidth / 2 + 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2)+"i" + new string(' ', 2) +" "+ "g"+ new string(' ', 3) +"g"+" "+"h"+ new string(' ', 3) +"h"+ "\n"+ 
+            new string(' ', Console.WindowWidth / 2 + 2) + new string('h', 5) + " " + new string(' ', 2) + "i"+ new string(' ', 2)+" " +"g"+ new string(' ', 4) + " " + new string('h', 5) + "\n"+
+            new string(' ', Console.WindowWidth / 2  + 2) +"h"+new string(' ', 3) +"h"+" "+ new string(' ', 2) + "i" + new string(' ', 2) +" "+ "g"+" "+new string('g', 3)+" "+"h"+new string(' ', 3)+"h"+"\n"+
+            new string(' ', Console.WindowWidth / 2  + 2) +"h"+ new string(' ', 3) +"h"+" "+ new string('i', 5) + " " + new string('g', 5) + " " +"h"+ new string(' ', 3) +"h";
+
+        public static void PrintHighScore()
         {
+            // How much moves did he made.
 
-            Dictionary<string, int> nameScore = new Dictionary<string, int>();
+            //Dictionary<string, int> nameScore = new Dictionary<string, int>();
 
-            string playerName = "";// Name of the player. We will ask him for his name, when the game is over.
-            int countMove = 0; // How much moves did he made.
+            //string playerName = "";// Name of the player. We will ask him for his name, when the game is over.
 
-            nameScore.Add(playerName, countMove);
+            //nameScore.Add(playerName, countMove);
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine(TitleHighScore);
+
             while (true)
             {
 
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 3; i++)
                 {
                     Console.WriteLine();
                 }
@@ -198,32 +217,21 @@ namespace Sokoban
                     string line = reader.ReadLine();
                     while (line != null)
                     {
-                        Console.WriteLine(line);
+                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (line.Length / 2)) + "}", line);
+
                         line = reader.ReadLine();
                     }
 
-                    using (var writer = new StreamWriter("../../Score.txt"))
-                    {
-                        
-
-                        
-                    }
+                   
                 }
 
-                string prompt = "Pres M for main manu or Q for quit. ";
+                string prompt = "Pres Enter for main manu. ";
+                Console.WriteLine();
                 Console.WriteLine("{0," + ((Console.WindowWidth/2) + (prompt.Length/2)) + "}", prompt);
                 ConsoleKeyInfo result = Console.ReadKey(true);
 
 
-                if (result.Key == ConsoleKey.Q)
-                {
-                    Environment.Exit(0);
-                    Environment.Exit(0);
-                    break;
-
-                }
-
-                else if (result.Key == ConsoleKey.M)
+                if (result.Key == ConsoleKey.Enter)
                 {
                     Console.Clear();
                     MainMenuPrint(ref counter);
