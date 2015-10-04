@@ -1,5 +1,5 @@
 	Name	Score
-	
+
 01	Pleyer	000
 02	Pleyer	000
 03	Pleyer	000
