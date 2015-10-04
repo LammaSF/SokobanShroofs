@@ -16,3 +16,9 @@ C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs\SokobanSh
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs\SokobanShroofs\bin\Debug\SokobanShroofs.exe
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs\SokobanShroofs\bin\Debug\SokobanShroofs.pdb
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache
+D:\Advanced\Shroofs\SokobanShroofs\EndGameMethod\SokobanShroofs\bin\Debug\SokobanShroofs.exe.config
+D:\Advanced\Shroofs\SokobanShroofs\EndGameMethod\SokobanShroofs\obj\Debug\SokobanShroofs.exe
+D:\Advanced\Shroofs\SokobanShroofs\EndGameMethod\SokobanShroofs\obj\Debug\SokobanShroofs.pdb
+D:\Advanced\Shroofs\SokobanShroofs\EndGameMethod\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache
+D:\Advanced\Shroofs\SokobanShroofs\EndGameMethod\SokobanShroofs\bin\Debug\SokobanShroofs.exe
+D:\Advanced\Shroofs\SokobanShroofs\EndGameMethod\SokobanShroofs\bin\Debug\SokobanShroofs.pdb

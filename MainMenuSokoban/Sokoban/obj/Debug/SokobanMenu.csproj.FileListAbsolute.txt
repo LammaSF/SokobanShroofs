@@ -4,3 +4,6 @@ C:\Users\Ivan\documents\visual studio 2015\Projects\Sokoban\Sokoban\bin\Debug\So
 C:\Users\Ivan\documents\visual studio 2015\Projects\Sokoban\Sokoban\obj\Debug\SokobanMenu.csprojResolveAssemblyReference.cache
 C:\Users\Ivan\documents\visual studio 2015\Projects\Sokoban\Sokoban\obj\Debug\Sokoban.exe
 C:\Users\Ivan\documents\visual studio 2015\Projects\Sokoban\Sokoban\obj\Debug\Sokoban.pdb
+D:\Advanced\Shroofs\SokobanShroofs\MainMenuSokoban\Sokoban\bin\Debug\Sokoban.exe.config
+D:\Advanced\Shroofs\SokobanShroofs\MainMenuSokoban\Sokoban\obj\Debug\Sokoban.exe
+D:\Advanced\Shroofs\SokobanShroofs\MainMenuSokoban\Sokoban\obj\Debug\Sokoban.pdb
