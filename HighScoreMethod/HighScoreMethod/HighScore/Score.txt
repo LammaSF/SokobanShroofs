@@ -1,6 +1,6 @@
-01	Pleyer	030
-02	Pleyer	020
-03	Pesho	020
+01	Pleyer	000
+02	Pleyer	000
+03	Pleyer	000
 04	Pleyer	000
 05	Pleyer	000
 06	Pleyer	000
