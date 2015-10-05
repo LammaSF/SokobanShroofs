@@ -28,17 +28,17 @@ namespace Sokoban
         {
             Console.WriteLine();
             Console.WriteLine();
-            string name = new string(' ', Console.WindowWidth/2 - 42/2) + new string('s', 5) + " " + new string('o', 5) +
+            string name = new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('s', 5) + " " + new string('o', 5) +
                           " k" + new string(' ', 3) + "k " +
                           new string('o', 5) + " " + new string('b', 4) + "   " + new string('a', 3) + "  n   n" + "\n"
-                          + new string(' ', Console.WindowWidth/2 - 42/2) + new string('s', 1) + "     o" +
+                          + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('s', 1) + "     o" +
                           new string(' ', 3) + "o k  k  o   o b   b a   a nn  n\n"
-                          + new string(' ', Console.WindowWidth/2 - 42/2) + new string('s', 5) + " o" +
+                          + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('s', 5) + " o" +
                           new string(' ', 3) + "o kkk   o   o " + new string('b', 4) + "  " + new string('a', 5) +
                           " n n n\n"
-                          + new string(' ', Console.WindowWidth/2 - 42/2) + new string(' ', 4) + new string('s', 1) +
+                          + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string(' ', 4) + new string('s', 1) +
                           " o" + new string(' ', 3) + "o k  k  o   o b   b a   a n  nn\n"
-                          + new string(' ', Console.WindowWidth/2 - 42/2) + new string('s', 5) + " " +
+                          + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('s', 5) + " " +
                           new string('o', 5) + " k   k " + new string('o', 5) + " " + new string('b', 4) +
                           "  a   a n   n";
             Console.WriteLine("{0}", name);
@@ -63,31 +63,31 @@ namespace Sokoban
                 case 4:
                     //0 and 4 because we want the selector to loop and go to the first option after hitting downArrow from last
                     counter = 0;
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (nGame.Length/2)) + "}", "-> " + nGame);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (hScores.Length/2)) + "}", hScores);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (options.Length/2)) + "}", options);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (quit.Length/2)) + "}", quit);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", "-> " + nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
                     break;
                 case 1:
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (nGame.Length/2)) + "}", nGame);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (hScores.Length/2)) + "}", "-> " + hScores);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (options.Length/2)) + "}", options);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (quit.Length/2)) + "}", quit);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", "-> " + hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
                     break;
                 case 2:
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (nGame.Length/2)) + "}", nGame);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (hScores.Length/2)) + "}", hScores);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (options.Length/2)) + "}", "-> " + options);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (quit.Length/2)) + "}", quit);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", "-> " + options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
                     break;
                 case 3:
                 case -1:
                     //3 and -1 because we want the selector to loop and go to the last option after hitting upArrow from first
                     counter = 3;
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (nGame.Length/2)) + "}", nGame);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (hScores.Length/2)) + "}", hScores);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (options.Length/2)) + "}", options);
-                    Console.WriteLine("{0," + ((Console.WindowWidth/2) + (quit.Length/2)) + "}", "-> " + quit);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", "-> " + quit);
                     break;
                 default:
                     counter = 0;
@@ -142,7 +142,7 @@ namespace Sokoban
             //}
 
             while (true)
-                // if someone finds a way to make the "are you sure" prompt appear in the middle as in the example above without breaking the code pls do
+            // if someone finds a way to make the "are you sure" prompt appear in the middle as in the example above without breaking the code pls do
             {
 
 
@@ -151,7 +151,7 @@ namespace Sokoban
                     Console.WriteLine();
                 }
                 string prompt = "Are you sure you want to quit? (Y/N)";
-                Console.WriteLine("{0," + ((Console.WindowWidth/2) + (prompt.Length/2)) + "}", prompt);
+                Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (prompt.Length / 2)) + "}", prompt);
                 ConsoleKeyInfo result = Console.ReadKey(true);
 
 
@@ -177,29 +177,24 @@ namespace Sokoban
         }
 
         public static string TitleHighScore =
-            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h"+ new string(' ', 3) +"h"+ " " + new string('i', 5) + " " + new string('g', 5) + " " +
-            "h" + new string(' ', 3) + "h" + " "  + "\n"+ 
-            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2)+"i" + new string(' ', 2) +" "+ "g"+ new string(' ', 3) +"g"+" "+"h"+ new string(' ', 3) +"h"+ "\n"+ 
-            new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('h', 5) + " " + new string(' ', 2) + "i"+ new string(' ', 2)+" " +"g"+ new string(' ', 4) + " " + new string('h', 5) + "\n"+
-            new string(' ', Console.WindowWidth / 2 - 42 / 2) +"h"+new string(' ', 3) +"h"+" "+ new string(' ', 2) + "i" + new string(' ', 2) +" "+ "g"+" "+new string('g', 3)+" "+"h"+new string(' ', 3)+"h"+"\n"+
-            new string(' ', Console.WindowWidth / 2 - 42 / 2) +"h"+ new string(' ', 3) +"h"+" "+ new string('i', 5) + " " + new string('g', 5) + " " +"h"+ new string(' ', 3) +"h"+"\n"+
-            Environment.NewLine+
-            new string(' ', Console.WindowWidth / 2+2) + "h"+ new string(' ', 3) +"h"+ " " + new string('i', 5) + " " + new string('g', 5) + " " +
-            "h" + new string(' ', 3) + "h" + " "  + "\n"+ 
-            new string(' ', Console.WindowWidth / 2 + 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2)+"i" + new string(' ', 2) +" "+ "g"+ new string(' ', 3) +"g"+" "+"h"+ new string(' ', 3) +"h"+ "\n"+ 
-            new string(' ', Console.WindowWidth / 2 + 2) + new string('h', 5) + " " + new string(' ', 2) + "i"+ new string(' ', 2)+" " +"g"+ new string(' ', 4) + " " + new string('h', 5) + "\n"+
-            new string(' ', Console.WindowWidth / 2  + 2) +"h"+new string(' ', 3) +"h"+" "+ new string(' ', 2) + "i" + new string(' ', 2) +" "+ "g"+" "+new string('g', 3)+" "+"h"+new string(' ', 3)+"h"+"\n"+
-            new string(' ', Console.WindowWidth / 2  + 2) +"h"+ new string(' ', 3) +"h"+" "+ new string('i', 5) + " " + new string('g', 5) + " " +"h"+ new string(' ', 3) +"h";
+
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " +
+            "h" + new string(' ', 3) + "h" + " " + "\n" +
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + new string(' ', 3) + "g" + " " + "h" + new string(' ', 3) + "h" + "\n" +
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('h', 5) + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + new string(' ', 4) + " " + new string('h', 5) + "\n" +
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + " " + new string('g', 3) + " " + "h" + new string(' ', 3) + "h" + "\n" +
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " + "h" + new string(' ', 3) + "h" + "\n" +
+            Environment.NewLine +
+            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " +
+             new string('r', 5) + " " + new string('e', 5) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + "s" + new string(' ', 4) + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " "+"r" + new string(' ', 3) + "r" + " " + "e" + new string(' ', 4) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + "c" + new string(' ', 4) + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string('r', 4) + " "  + new string('e', 5) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + new string(' ', 4) + "s" + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r"+" "+"r" + new string(' ', 3) +"e" + new string(' ', 4) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2)  + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " + "r" + new string(' ', 3) + "r" +" "+ new string('e', 5);
 
         public static void PrintHighScore()
         {
-            // How much moves did he made.
-
-            //Dictionary<string, int> nameScore = new Dictionary<string, int>();
-
-            //string playerName = "";// Name of the player. We will ask him for his name, when the game is over.
-
-            //nameScore.Add(playerName, countMove);
+           
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine(TitleHighScore);
@@ -221,15 +216,12 @@ namespace Sokoban
 
                         line = reader.ReadLine();
                     }
-
-                   
                 }
 
                 string prompt = "Pres Enter for main manu. ";
                 Console.WriteLine();
-                Console.WriteLine("{0," + ((Console.WindowWidth/2) + (prompt.Length/2)) + "}", prompt);
+                Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (prompt.Length / 2)) + "}", prompt);
                 ConsoleKeyInfo result = Console.ReadKey(true);
-
 
                 if (result.Key == ConsoleKey.Enter)
                 {
@@ -238,7 +230,6 @@ namespace Sokoban
 
                 }
             }
-
         }
     }
 }
