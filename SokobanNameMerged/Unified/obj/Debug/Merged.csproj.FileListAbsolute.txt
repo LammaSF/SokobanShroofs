@@ -1,0 +1,6 @@
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\Unified\bin\Debug\Unified.exe.config
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\Unified\obj\Debug\Merged.csprojResolveAssemblyReference.cache
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\Unified\bin\Debug\Unified.exe
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\Unified\bin\Debug\Unified.pdb
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\Unified\obj\Debug\Unified.exe
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\Unified\obj\Debug\Unified.pdb

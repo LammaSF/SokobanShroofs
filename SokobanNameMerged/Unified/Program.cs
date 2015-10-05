@@ -14,13 +14,14 @@ namespace SokobanShroofs
         public static Coordinate[] Targets = new Coordinate[5];
         public static char[,] level = new char[15, 18];
         public static int counter = 0;
+
         public static string name = new string(' ', Console.WindowWidth / 2 - 42 / 2)+new string('_',41)+"\n"+new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('S', 5) + "  " + new string('O', 3) + "  K" + new string(' ', 3) + "K  " +
                new string('O', 3) + "  " + new string('B', 4) + "   " + new string('A', 3) + "  N   N" + "\n"
                 + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('S', 2) + "    O" + new string(' ', 3) + "O K  K  O   O B   B A   A NN  N\n"
                 + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('S', 5) + " O" + new string(' ', 3) + "O KKK   O   O " + new string('B', 4) + "  " + new string('A', 5) + " N N N\n"
                 + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string(' ', 3) + new string('S', 2) + " O" + new string(' ', 3) + "O K  K  O   O B   B A   A N  NN\n"
                 + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('S', 5) + "  " + new string('O', 3) + "  K   K  " + new string('O', 3) + "  " + new string('B', 4) + "  A   A N   N\n"
-                + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('', 41) + "\n";
+                + new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('_', 41) + "\n";
 
         public static string win = new string(' ', Console.WindowWidth / 2 - 30 / 2) + "WW" + new string(' ', 6) + "WW" + "    " + "II" + "    " + "NNN" + new string(' ', 4) + "NN" + "\n"
                 + new string(' ', Console.WindowWidth / 2 - 30 / 2) + "WW" + new string(' ', 6) + "WW" + "    " + "II" + "    " + "NNN" + new string(' ', 4) + "NN" + "\n"
@@ -32,7 +33,12 @@ namespace SokobanShroofs
                                     + new string(' ', Console.WindowWidth / 2 - 30 / 2) + "LL     " + "O" + new string(' ', 3) + "O  " + "O" + new string(' ', 3) + "O  " + new string('S', 5) + "  " + new string('E', 5) + "\n"
                                     + new string(' ', Console.WindowWidth / 2 - 30 / 2) + "LL     " + "O" + new string(' ', 3) + "O  " + "O" + new string(' ', 3) + "O  " + new string(' ', 3) + "SS" + "  " + "EE" + "   " + "\n"
                                     + new string(' ', Console.WindowWidth / 2 - 30 / 2) + new string('L', 5) + "  " + " " + new string('0', 3) + " " + "   " + new string('0', 3) + " " + "  " + new string('s', 5) + "  " + new string('E', 5) + "\n";
-        
+
+        private static void Main()
+        {
+            Console.CursorVisible = false;
+            MainMenuPrint(ref counter);
+        }
         public static int ReadKey(ConsoleKeyInfo key, ref int counter)
         {
             if (key.Key == ConsoleKey.DownArrow) return ++counter;
@@ -47,6 +53,8 @@ namespace SokobanShroofs
             Console.Clear();
             Console.WriteLine();
             Console.WriteLine();
+            Console.CursorVisible = false;
+           
           
 
            
@@ -125,10 +133,7 @@ namespace SokobanShroofs
             }
 
         }
-        private static void Main()
-        {
-            MainMenuPrint(ref counter);
-        }
+        
         private static void QuitPrompt()
         {
 
@@ -154,6 +159,7 @@ namespace SokobanShroofs
                 else if (result.Key == ConsoleKey.N)
                 {
                     Console.Clear();
+                    counter = 0;
                     MainMenuPrint(ref counter);
 
                 }
