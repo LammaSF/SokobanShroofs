@@ -42,13 +42,7 @@ namespace Sokoban
                           new string('o', 5) + " k   k " + new string('o', 5) + " " + new string('b', 4) +
                           "  a   a n   n";
             Console.WriteLine("{0}", name);
-            //Console.WriteLine("{0} {1} k{2}k {3} {4}   {5}  n   n \n{6}     o{7}o k  k  o   o b   b a   a nn  n\n{8} o{9}o kkk   o   o {10}  {11} n n n\n{12}{13} o{14}o k  k  o   o b   b a   a n  nn\n{15} {16} k   k {17} {18}  a   a n   n", 
-            //                                   new string('s', 5), new string('o', 5), new string(' ', 3), new string('o', 5), new string('b', 4), new string('a', 3),
-            //                                   new string('s', 1), new string(' ', 3),
-            //                                   new string('s', 5), new string(' ', 3), new string('b',4), new string('a',5),
-            //                                   new string(' ', 4), new string('s', 1), new string(' ', 3),
-            //                                   new string('s', 5), new string('o', 5), new string('o', 5), new string('b', 4));
-            // Console.Clear();
+            
             Console.WriteLine();
             Console.WriteLine();
 
@@ -113,6 +107,7 @@ namespace Sokoban
                     PrintHighScore();
                     break;
                 case 2:
+                    GetNameAndScore();
                     break;
                 case 3:
                     QuitPrompt();
@@ -123,24 +118,7 @@ namespace Sokoban
 
         private static void QuitPrompt()
         {
-            //while (true)
-            //{
-            //    Console.Clear();
-            //    for (int i = 0; i < 4; i++)
-            //    {
-            //        Console.WriteLine();
-            //    }
-            //    string prompt = "Are you sure you want to quit? (Y/N)";
-            //    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (prompt.Length / 2)) + "}", prompt);
-            //    ConsoleKeyInfo answer = Console.ReadKey(true);
-            //    if (answer.KeyChar == 'n') // if N or ESC then go to main menu
-            //    {
-            //        Console.WriteLine("main menu");
-            //        MainMenuPrint(ref counter);
-            //    }
-            //    if (answer.KeyChar == 'y') Console.WriteLine("Exit"); //Environment.Exit(0);           //if y close program;
-            //}
-
+           
             while (true)
             // if someone finds a way to make the "are you sure" prompt appear in the middle as in the example above without breaking the code pls do
             {
@@ -187,14 +165,14 @@ namespace Sokoban
             Environment.NewLine +
             new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " +
              new string('r', 5) + " " + new string('e', 5) + "\n" +
-            new string(' ', Console.WindowWidth / 2 + 2) + "s" + new string(' ', 4) + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " "+"r" + new string(' ', 3) + "r" + " " + "e" + new string(' ', 4) + "\n" +
-            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + "c" + new string(' ', 4) + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string('r', 4) + " "  + new string('e', 5) + "\n" +
-            new string(' ', Console.WindowWidth / 2 + 2) + new string(' ', 4) + "s" + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r"+" "+"r" + new string(' ', 3) +"e" + new string(' ', 4) + "\n" +
-            new string(' ', Console.WindowWidth / 2 + 2)  + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " + "r" + new string(' ', 3) + "r" +" "+ new string('e', 5);
+            new string(' ', Console.WindowWidth / 2 + 2) + "s" + new string(' ', 4) + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string(' ', 3) + "r" + " " + "e" + new string(' ', 4) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + "c" + new string(' ', 4) + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string('r', 4) + " " + new string('e', 5) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + new string(' ', 4) + "s" + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + " " + "r" + new string(' ', 3) + "e" + new string(' ', 4) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " + "r" + new string(' ', 3) + "r" + " " + new string('e', 5);
 
         public static void PrintHighScore()
         {
-           
+
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine(TitleHighScore);
@@ -206,6 +184,8 @@ namespace Sokoban
                 {
                     Console.WriteLine();
                 }
+                string nameScore = "\tName\tScore";
+                Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nameScore.Length / 2)) + "}", nameScore);
 
                 using (var reader = new StreamReader("../../Score.txt"))
                 {
@@ -228,6 +208,58 @@ namespace Sokoban
                     Console.Clear();
                     MainMenuPrint(ref counter);
 
+                }
+            }
+        }
+
+        public static void GetNameAndScore()
+        {
+            int score = 020;
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine();
+            }
+            string textScore = "Your score are:";
+            string textName = "Please enter your name: ";
+            Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (textScore.Length / 2)) + "} {1}", textScore, score);
+            Console.WriteLine();
+            Console.Write("{0," + ((Console.WindowWidth / 2) + (textScore.Length / 2)) + "}", textName);
+            string name = Console.ReadLine();
+
+           // Dictionary<string,Dictionary<string, string>> newScore=new Dictionary<string, Dictionary<string, string>>();
+            List<string> newScore=new List<string>();
+          
+            using (var reader = new StreamReader("../../Score.txt"))
+            {
+                string lineScore = "";
+                int counter = 0;
+                
+                for(int i=0;i<10;i++)
+                {
+                    string line = reader.ReadLine();
+                    string[] words = line.Split('\t');
+
+                    if (score > int.Parse(words[2])&&counter==0)
+                    {
+                        words[2] = score.ToString().PadLeft(3,'0');
+                        words[1] = name;
+                        lineScore = words[0] + "\t" + words[1] + "\t" + words[2];
+                       newScore.Add(lineScore);
+                        counter++;
+                    }
+                    else
+                    {
+                        lineScore = words[0] + "\t" + words[1] + "\t" + words[2];
+                        newScore.Add(lineScore);
+                    }
+                }
+            }
+            using (var writer=new StreamWriter("../../Score.txt"))
+            {
+                foreach (var line in newScore)
+                {
+                    writer.WriteLine(line);
                 }
             }
         }
