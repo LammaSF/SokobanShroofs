@@ -1,0 +1,12 @@
+E:\SoftUni\1.Fundamental Level\Advanced C#\game\SokobanShroofs\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.exe.config
+E:\SoftUni\1.Fundamental Level\Advanced C#\game\SokobanShroofs\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.exe
+E:\SoftUni\1.Fundamental Level\Advanced C#\game\SokobanShroofs\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.pdb
+E:\SoftUni\1.Fundamental Level\Advanced C#\game\SokobanShroofs\HighScoreMethod\HighScoreMethod\HighScore\obj\Debug\HighScore.csprojResolveAssemblyReference.cache
+E:\SoftUni\1.Fundamental Level\Advanced C#\game\SokobanShroofs\HighScoreMethod\HighScoreMethod\HighScore\obj\Debug\HighScore.exe
+E:\SoftUni\1.Fundamental Level\Advanced C#\game\SokobanShroofs\HighScoreMethod\HighScoreMethod\HighScore\obj\Debug\HighScore.pdb
+E:\C# Projects\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.exe.config
+E:\C# Projects\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\obj\Debug\HighScore.exe
+E:\C# Projects\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\obj\Debug\HighScore.pdb
+E:\C# Projects\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.exe
+E:\C# Projects\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.pdb
+E:\C# Projects\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\obj\Debug\HighScore.csprojResolveAssemblyReference.cache

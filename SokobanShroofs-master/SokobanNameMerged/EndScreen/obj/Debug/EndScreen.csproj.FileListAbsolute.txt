@@ -1,0 +1,12 @@
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\bin\Debug\EndScreen.exe.config
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\bin\Debug\EndScreen.exe
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\bin\Debug\EndScreen.pdb
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\obj\Debug\EndScreen.csprojResolveAssemblyReference.cache
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\obj\Debug\EndScreen.exe
+C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\obj\Debug\EndScreen.pdb
+E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.exe.config
+E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.exe
+E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.pdb
+E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.exe
+E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.pdb
+E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.csprojResolveAssemblyReference.cache

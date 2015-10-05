@@ -22,11 +22,11 @@ namespace EndScreen
                 + new string(' ', Console.WindowWidth / 2 - 30 / 2) + "WW" + new string(' ', 6) + "WW" + "    " + "II" + "    " + "NN" + new string(' ', 1) + "NN" + new string(' ', 2) + "NN" + "\n"
                 + new string(' ', Console.WindowWidth / 2 - 30 / 2) + " WW" + new string(' ', 1) + "WW" + new string(' ', 1) + "WW " + "    " + "II" + "    " + "NN" + new string(' ', 2) + "NN" + new string(' ', 1) + "NN" + "\n"
                 + new string(' ', Console.WindowWidth / 2 - 30 / 2) + "  WW" + new string(' ', 2) + "WW  " + "    " + "II" + "    " + "NN" + new string(' ', 4) + "NNN" + "\n";
-        public static string loose = new string(' ', Console.WindowWidth / 2 - 30 / 2) + "LL     " + " " + new string('0', 3) + " " + "   " + new string('0', 3) + " "+"  "+new string('s', 5)+"  "+new string('E',5)+"\n"
-                                     + new string(' ', Console.WindowWidth / 2 - 30 / 2)+"LL     " +"O"+ new string(' ',3)+"O  "+"O"+ new string(' ',3)+"O  "+"SS"+new string(' ',3)+"  "+"EE"+"   "+"\n"
-                                     + new string(' ', Console.WindowWidth / 2 - 30 / 2)+"LL     " +"O"+ new string(' ',3)+"O  "+"O"+ new string(' ',3)+"O  "+new string('S',5)+"  "+new string('E',5)+"\n"
-                                     + new string(' ', Console.WindowWidth / 2 - 30 / 2)+"LL     " +"O"+ new string(' ',3)+"O  "+"O"+ new string(' ',3)+"O  "+new string(' ',3)+"SS"+"  "+"EE"+"   "+"\n"
-                                     + new string(' ', Console.WindowWidth / 2 - 30 / 2) + new string('L', 5) + "  " + " " + new string('0', 3) + " " + "   " + new string('0', 3) + " " + "  " + new string('s', 5) + "  " + new string('E', 5) + "\n";
+        public static string loose = new string(' ', Console.WindowWidth / 2 - 30 / 2) + "LL     " + " " + new string('0', 3) + " " + "  " + new string('s', 5) + "  " + new string('E', 5) + "\n"
+                                    + new string(' ', Console.WindowWidth / 2 - 30 / 2) + "LL     " + "O" + new string(' ', 3) + "O  " + "SS" + new string(' ', 3) + "  " + "EE" + "   " + "\n"
+                                    + new string(' ', Console.WindowWidth / 2 - 30 / 2) + "LL     " + "O" + new string(' ', 3) + "O  " + new string('S', 5) + "  " + new string('E', 5) + "\n"
+                                    + new string(' ', Console.WindowWidth / 2 - 30 / 2) + "LL     " + "O" + new string(' ', 3) + "O  " + new string(' ', 3) + "SS" + "  " + "EE" + "   " + "\n"
+                                    + new string(' ', Console.WindowWidth / 2 - 30 / 2) + new string('L', 5) + "  " + " " + new string('0', 3) + " " + "  " + new string('S', 5) + "  " + new string('E', 5) + "\n";
         
         static void Main(string[] args)
         {

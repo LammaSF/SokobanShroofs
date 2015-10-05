@@ -4,3 +4,6 @@ C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\SokName\bin\Debu
 C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\SokName\obj\Debug\SokName.csprojResolveAssemblyReference.cache
 C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\SokName\obj\Debug\SokName.exe
 C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\SokName\obj\Debug\SokName.pdb
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\SokName\bin\Debug\SokName.exe.config
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\SokName\obj\Debug\SokName.exe
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\SokName\obj\Debug\SokName.pdb

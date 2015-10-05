@@ -4,3 +4,9 @@ C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\Unified\bin\Debu
 C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\Unified\bin\Debug\Unified.pdb
 C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\Unified\obj\Debug\Unified.exe
 C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\Unified\obj\Debug\Unified.pdb
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\Unified\bin\Debug\Unified.exe.config
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\Unified\obj\Debug\Unified.exe
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\Unified\obj\Debug\Unified.pdb
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\Unified\bin\Debug\Unified.exe
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\Unified\bin\Debug\Unified.pdb
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\Unified\obj\Debug\Merged.csprojResolveAssemblyReference.cache

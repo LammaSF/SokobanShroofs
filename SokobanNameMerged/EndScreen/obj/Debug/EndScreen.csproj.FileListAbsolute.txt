@@ -4,3 +4,6 @@ C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\bin\De
 C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\obj\Debug\EndScreen.csprojResolveAssemblyReference.cache
 C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\obj\Debug\EndScreen.exe
 C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\obj\Debug\EndScreen.pdb
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.exe.config
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.exe
+D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.pdb
