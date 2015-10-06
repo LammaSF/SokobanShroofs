@@ -1,9 +1,9 @@
 ﻿using System;
 using System.IO;
-using System.Threading;
 
 namespace SokobanShroofs
-{    class BasicMenu
+{
+    class BasicMenu
     {
         public static int counter = 0;
         static void Main()
@@ -42,7 +42,7 @@ namespace SokobanShroofs
             Console.WriteLine();
             Console.WriteLine();
             string nGame = "New game";
-            if(SokobanShroofs.getResumeOnMenu) nGame = "Resume game";
+            if(!SokobanShroofs.levelBeaten) nGame = "Resume game";
             string hScores = "High scores";
             string options = "Options";
             string quit = "Quit";
@@ -146,13 +146,11 @@ namespace SokobanShroofs
 
         }
 
-    }
-    
+    }    
     class SokobanShroofs
     {
         public static int currentLevel = 1;
         public static bool levelBeaten = true;
-        public static bool getResumeOnMenu = false;
         public static Coordinate Hero { get; set; }
         public static Coordinate[] Targets;
         private static char[,] level;
@@ -189,12 +187,46 @@ namespace SokobanShroofs
                     case ConsoleKey.LeftArrow:
                         TryMove(0, -1);
                         break;
+                    case ConsoleKey.R:
+                        ResetPrompt();
+                        break;
                     case ConsoleKey.Escape:
                         BasicMenu.MainMenuPrint(ref BasicMenu.counter);
                         break;
 
                 }
             }
+        }
+        private static void ResetPrompt()
+        {
+            while (true)
+            {
+                Console.Clear();
+
+                for (int i = 0; i < 4; i++)
+                {
+                    Console.WriteLine();
+                }
+                string prompt = "Are you sure you want to reset the level? (Y/N)";
+                Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (prompt.Length / 2)) + "}", prompt);
+                ConsoleKeyInfo result = Console.ReadKey(true);
+                switch (result.Key)
+                { 
+                    case ConsoleKey.Y:
+                    LevelReset();
+                    break;
+                case ConsoleKey.N: case ConsoleKey.Escape:
+                    PrintLevel();
+                    break;
+                }
+                break;
+            }
+        }
+        private static void LevelReset()
+        {
+            levelBeaten = true;
+            GetLevel(ref SokobanShroofs.currentLevel);
+            PrintLevel();
         }
         private static void TryMove(int x, int y)
         {
@@ -480,7 +512,5 @@ namespace SokobanShroofs
         public int X { get; set; }
         public int Y { get; set; }
     }
-
-
 }
 

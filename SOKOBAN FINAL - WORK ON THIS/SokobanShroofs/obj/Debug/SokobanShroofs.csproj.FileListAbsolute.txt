@@ -34,3 +34,9 @@ C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\WorkingGame - needs menu
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\WorkingGame - needs menu\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\WorkingGame - needs menu\SokobanShroofs\obj\Debug\SokobanShroofs.exe
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\WorkingGame - needs menu\SokobanShroofs\obj\Debug\SokobanShroofs.pdb
+C:\Users\Ivan\Documents\Visual Studio 2015\Projects\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.exe.config
+C:\Users\Ivan\Documents\Visual Studio 2015\Projects\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.exe
+C:\Users\Ivan\Documents\Visual Studio 2015\Projects\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.pdb
+C:\Users\Ivan\Documents\Visual Studio 2015\Projects\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.exe
+C:\Users\Ivan\Documents\Visual Studio 2015\Projects\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.pdb
+C:\Users\Ivan\Documents\Visual Studio 2015\Projects\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache
