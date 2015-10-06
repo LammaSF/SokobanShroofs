@@ -629,9 +629,8 @@ namespace SokobanShroofs
            new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('h', 5) + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + new string(' ', 4) + " " + new string('h', 5) + "\n" +
            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + " " + new string('g', 3) + " " + "h" + new string(' ', 3) + "h" + "\n" +
            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " + "h" + new string(' ', 3) + "h" + "\n" +
-           Environment.NewLine +
            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " +
-            new string('r', 5) + " " + new string('e', 5) + "\n" +
+           new string('r', 5) + " " + new string('e', 5) + "\n" +
            new string(' ', Console.WindowWidth / 2 + 2) + "s" + new string(' ', 4) + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string(' ', 3) + "r" + " " + "e" + new string(' ', 4) + "\n" +
            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + "c" + new string(' ', 4) + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string('r', 4) + " " + new string('e', 5) + "\n" +
            new string(' ', Console.WindowWidth / 2 + 2) + new string(' ', 4) + "s" + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + " " + "r" + new string(' ', 3) + "e" + new string(' ', 4) + "\n" +
@@ -639,18 +638,11 @@ namespace SokobanShroofs
 
         public static void PrintHighScore()
         {
-
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine(TitleHighScore);
-
             while (true)
             {
-
-                for (int i = 0; i < 3; i++)
-                {
-                    Console.WriteLine();
-                }
+                Console.Clear();
+                Console.WriteLine(TitleHighScore);
+                Console.WriteLine();
                 string nameScore = "\tName\tScore";
                 Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nameScore.Length / 2)) + "}", nameScore);
 
@@ -665,12 +657,12 @@ namespace SokobanShroofs
                     }
                 }
 
-                string prompt = "Pres Enter for main manu. ";
                 Console.WriteLine();
+                string prompt = "Pres ESC for main manu.";
                 Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (prompt.Length / 2)) + "}", prompt);
                 ConsoleKeyInfo result = Console.ReadKey(true);
 
-                if (result.Key == ConsoleKey.Enter)
+                if (result.Key == ConsoleKey.Escape)
                 {
                     Console.Clear();
                     MainMenuPrint(ref counter);

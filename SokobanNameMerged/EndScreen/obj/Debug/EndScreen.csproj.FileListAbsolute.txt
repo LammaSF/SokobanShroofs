@@ -7,3 +7,9 @@ C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\EndScreen\obj\De
 D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.exe.config
 D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.exe
 D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.exe.config
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.csprojResolveAssemblyReference.cache

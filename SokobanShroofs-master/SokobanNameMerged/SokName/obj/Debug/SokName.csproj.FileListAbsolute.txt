@@ -7,3 +7,9 @@ C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\SokName\obj\Debu
 E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\SokName\bin\Debug\SokName.exe.config
 E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\SokName\obj\Debug\SokName.exe
 E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\SokName\obj\Debug\SokName.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\SokName\bin\Debug\SokName.exe.config
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\SokName\obj\Debug\SokName.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\SokName\obj\Debug\SokName.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\SokName\bin\Debug\SokName.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\SokName\bin\Debug\SokName.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\SokName\obj\Debug\SokName.csprojResolveAssemblyReference.cache
