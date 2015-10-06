@@ -125,27 +125,20 @@ namespace SokobanShroofs
                 Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (prompt.Length / 2)) + "}", prompt);
                 ConsoleKeyInfo result = Console.ReadKey(true);
 
-
-                if (result.Key == ConsoleKey.Y)
+                switch (result.Key)
                 {
-                    Environment.Exit(0);
-                    break;
-
+                    case ConsoleKey.Y:
+                        Environment.Exit(0);
+                        break;
+                    case ConsoleKey.N:
+                    case ConsoleKey.Escape:
+                        Console.Clear();
+                        MainMenuPrint(ref counter);
+                        break;
                 }
-
-                else if (result.Key == ConsoleKey.N)
-                {
-                    Console.Clear();
-                    MainMenuPrint(ref counter);
-
-                }
+                break;
             }
-
-
-
-
         }
-
     }    
     class SokobanShroofs
     {
