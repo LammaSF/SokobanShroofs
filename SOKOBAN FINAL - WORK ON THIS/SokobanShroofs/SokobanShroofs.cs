@@ -103,6 +103,7 @@ namespace SokobanShroofs
                     HighScore.PrintHighScore();
                     break;
                 case 2:
+                    Options.PrintOptions(ref counter);
                     break;
                 case 3:
                     QuitPrompt();
@@ -499,6 +500,108 @@ namespace SokobanShroofs
             System.Threading.Thread.Sleep(delay);
 
         }
+    }
+
+    class Options
+    {
+        public static int counterMoves = 0;
+
+        public static int OptionsReadKey(ConsoleKeyInfo key, ref int counterMoves)
+        {
+            if (key.Key == ConsoleKey.DownArrow) return ++counterMoves;
+            if (key.Key == ConsoleKey.UpArrow) return --counterMoves;
+            if (key.Key == ConsoleKey.Enter) OptionsEnter(ref counterMoves);
+            if (key.Key == ConsoleKey.Escape) Console.Clear(); BasicMenu.MainMenuPrint(ref BasicMenu.counter);
+
+            return counterMoves;
+        }
+
+        private static void OptionsEnter(ref int counterMoves)
+        {
+            switch (counterMoves)
+            {
+                case 0:
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    break;
+                case 1:
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    break;
+                case 2:
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+                case 3:
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    break;
+            }
+        }
+
+        public static void PrintOptions(ref int counterMoves)
+        {
+            Console.Clear();
+            Console.CursorVisible = false;
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine();
+            Console.WriteLine();
+            string redColor = "Red Background";
+            string cyanColor = "Cyan Background";
+            string blackColor = "Black Background";
+            string whiteColor = "White Background";
+            switch (counterMoves) //we have 4 options so we have to restrain the selector to them
+            {
+
+                case 0:
+                case 4:
+                    //0 and 4 because we want the selector to loop and go to the first option after hitting downArrow from last
+                    counterMoves = 0;
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", "-> " + redColor+ " <-");
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", cyanColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", blackColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", whiteColor);
+                    break;
+                case 1:
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", redColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", "-> " + cyanColor + " <-");
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", blackColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", whiteColor);
+                    break;
+                case 2:
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", redColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", cyanColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", "-> " + blackColor + " <-");
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", whiteColor);
+                    break;
+                case 3:
+                case -1:
+                    //3 and -1 because we want the selector to loop and go to the last option after hitting upArrow from first
+                    counterMoves = 3;
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", redColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", cyanColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", blackColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", "-> " + whiteColor + " <-");
+                    break;
+                default:
+                    counterMoves = 0;
+                    break;
+            }
+            while (true)                            //read keys and call menu with the selector on the new position
+            {
+                var key = Console.ReadKey();
+
+                Console.Clear();
+                OptionsReadKey(key, ref counterMoves);
+                PrintOptions(ref counterMoves);
+
+            }
+
+        }
+
     }
     class Coordinate
     {

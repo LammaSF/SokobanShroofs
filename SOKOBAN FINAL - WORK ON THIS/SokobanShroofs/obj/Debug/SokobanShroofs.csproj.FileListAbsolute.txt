@@ -46,3 +46,9 @@ C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SOKOBAN FINAL - WORK ON 
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.exe
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.pdb
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache
+E:\SoftUni\1.Fundamental Level\Advanced C#\Game\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.exe.config
+E:\SoftUni\1.Fundamental Level\Advanced C#\Game\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.exe
+E:\SoftUni\1.Fundamental Level\Advanced C#\Game\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.pdb
+E:\SoftUni\1.Fundamental Level\Advanced C#\Game\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.exe
+E:\SoftUni\1.Fundamental Level\Advanced C#\Game\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.pdb
+E:\SoftUni\1.Fundamental Level\Advanced C#\Game\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache
