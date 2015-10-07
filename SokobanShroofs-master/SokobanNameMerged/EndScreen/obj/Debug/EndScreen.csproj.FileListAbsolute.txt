@@ -10,3 +10,9 @@ E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndScreen\obj\Debug\EndSc
 E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.exe
 E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.pdb
 E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.exe.config
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndScreen\bin\Debug\EndScreen.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndScreen\obj\Debug\EndScreen.csprojResolveAssemblyReference.cache

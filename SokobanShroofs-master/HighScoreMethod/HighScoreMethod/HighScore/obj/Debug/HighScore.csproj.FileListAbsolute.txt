@@ -10,3 +10,9 @@ E:\C# Projects\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\o
 E:\C# Projects\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.exe
 E:\C# Projects\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.pdb
 E:\C# Projects\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\obj\Debug\HighScore.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.exe.config
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\obj\Debug\HighScore.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\obj\Debug\HighScore.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\bin\Debug\HighScore.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\HighScoreMethod\HighScoreMethod\HighScore\obj\Debug\HighScore.csprojResolveAssemblyReference.cache

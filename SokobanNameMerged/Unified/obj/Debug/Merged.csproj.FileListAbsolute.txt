@@ -10,3 +10,9 @@ D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\Unified\obj\Debug\Unified.p
 D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\Unified\bin\Debug\Unified.exe
 D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\Unified\bin\Debug\Unified.pdb
 D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\Unified\obj\Debug\Merged.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\Unified\bin\Debug\Unified.exe.config
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\Unified\obj\Debug\Unified.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\Unified\obj\Debug\Unified.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\Unified\bin\Debug\Unified.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\Unified\bin\Debug\Unified.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\Unified\obj\Debug\Merged.csprojResolveAssemblyReference.cache

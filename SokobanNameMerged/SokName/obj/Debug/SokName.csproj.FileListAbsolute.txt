@@ -7,3 +7,9 @@ C:\Users\Lili\Documents\Visual Studio 2013\Projects\SokobanName\SokName\obj\Debu
 D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\SokName\bin\Debug\SokName.exe.config
 D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\SokName\obj\Debug\SokName.exe
 D:\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\SokName\obj\Debug\SokName.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\SokName\bin\Debug\SokName.exe.config
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\SokName\obj\Debug\SokName.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\SokName\obj\Debug\SokName.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\SokName\bin\Debug\SokName.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\SokName\bin\Debug\SokName.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\SokName\obj\Debug\SokName.csprojResolveAssemblyReference.cache

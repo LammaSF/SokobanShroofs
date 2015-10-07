@@ -114,9 +114,9 @@ namespace Sokoban
         private static void QuitPrompt()
         {
 
-            while (true)        // if someone finds a way to make the "are you sure" prompt appear in the middle as in the example above without breaking the code pls do
+            while (true)
             {
-
+                Console.Clear();
 
                 for (int i = 0; i < 4; i++)
                 {

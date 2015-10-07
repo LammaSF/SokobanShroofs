@@ -10,3 +10,9 @@ E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndLevel\obj\Debug\EndLev
 E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndLevel\bin\Debug\EndLevel.exe
 E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndLevel\bin\Debug\EndLevel.pdb
 E:\C# Projects\SokobanShroofs-master\SokobanNameMerged\EndLevel\obj\Debug\EndLevel.csprojResolveAssemblyReference.cache
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndLevel\bin\Debug\EndLevel.exe.config
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndLevel\obj\Debug\EndLevel.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndLevel\obj\Debug\EndLevel.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndLevel\bin\Debug\EndLevel.exe
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndLevel\bin\Debug\EndLevel.pdb
+C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanShroofs-master\SokobanNameMerged\EndLevel\obj\Debug\EndLevel.csprojResolveAssemblyReference.cache
