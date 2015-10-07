@@ -19,6 +19,7 @@ namespace SokobanShroofs
             if (key.Key == ConsoleKey.DownArrow) return ++counter;
             if (key.Key == ConsoleKey.UpArrow) return --counter;
             if (key.Key == ConsoleKey.Enter) ExecuteEnter(ref counter);
+            if (key.Key == ConsoleKey.Escape) QuitPrompt();
 
             return counter;
         }
@@ -168,9 +169,13 @@ namespace SokobanShroofs
             {
                 GetLevel(ref currentLevel);
             }
-            catch (Exception e)
+            catch (FileNotFoundException e)
             {
-                Console.WriteLine("An error occurred: '{0}'", e);   //make this work;
+                Console.WriteLine("Level{0} does not exist.", currentLevel);
+                Console.Write("Select level to be loaded:");
+                currentLevel = int.Parse(Console.ReadLine());
+                levelBeaten = true;
+                GetLevel(ref currentLevel);
             }
             PrintLevel();
             ReadKey();
@@ -444,8 +449,6 @@ namespace SokobanShroofs
                             line = reader.ReadLine();
                         }
                     }
-
-                    Console.WriteLine();
                     string prompt = "Pres ESC for main manu.";
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (prompt.Length / 2)) + "}", prompt);
                     ConsoleKeyInfo result = Console.ReadKey(true);
@@ -582,21 +585,21 @@ namespace SokobanShroofs
                 case 4:
                     //0 and 4 because we want the selector to loop and go to the first option after hitting downArrow from last
                     counterMoves = 0;
-                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", "-> " + redColor+ " <-");
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", "-> " + redColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", cyanColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", blackColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", whiteColor);
                     break;
                 case 1:
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", redColor);
-                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", "-> " + cyanColor + " <-");
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", "-> " + cyanColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", blackColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", whiteColor);
                     break;
                 case 2:
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", redColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", cyanColor);
-                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", "-> " + blackColor + " <-");
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", "-> " + blackColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", whiteColor);
                     break;
                 case 3:
@@ -606,7 +609,7 @@ namespace SokobanShroofs
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", redColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", cyanColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", blackColor);
-                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", "-> " + whiteColor + " <-");
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", "-> " + whiteColor);
                     break;
                 default:
                     counterMoves = 0;

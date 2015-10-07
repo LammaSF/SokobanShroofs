@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 01	Player	000
 02	Player	000
 03	Player	000
@@ -9,15 +8,4 @@
 08	Player	000
 09	Player	000
 10	Player	000
-=======
-01	Pleyer	000
-02	Pleyer	000
-03	Pleyer	000
-04	Pleyer	000
-05	Pleyer	000
-06	Pleyer	000
-07	Pleyer	000
-08	Pleyer	000
-09	Pleyer	000
-10	Pleyer	000
->>>>>>> b079bdd634192aca51c205a007f628b4469a771a
+
