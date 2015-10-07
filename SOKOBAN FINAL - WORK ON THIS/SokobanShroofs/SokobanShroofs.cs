@@ -1,6 +1,9 @@
 ﻿using System;
 using System.IO;
+<<<<<<< HEAD
 using System.Threading;
+=======
+>>>>>>> b079bdd634192aca51c205a007f628b4469a771a
 
 namespace SokobanShroofs
 {
@@ -9,7 +12,11 @@ namespace SokobanShroofs
         public static int counter = 0;
         static void Main()
         {
+<<<<<<< HEAD
             Console.CursorVisible = false;
+=======
+
+>>>>>>> b079bdd634192aca51c205a007f628b4469a771a
             MainMenuPrint(ref counter);
         }
         public static int ReadKey(ConsoleKeyInfo key, ref int counter)
@@ -23,7 +30,10 @@ namespace SokobanShroofs
         public static void MainMenuPrint(ref int counter)
         {
             Console.Clear();
+<<<<<<< HEAD
             Console.CursorVisible = false;
+=======
+>>>>>>> b079bdd634192aca51c205a007f628b4469a771a
             Console.WriteLine();
             Console.WriteLine();
             string name = new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('s', 5) + " " + new string('o', 5) + " k" + new string(' ', 3) + "k " +
@@ -85,7 +95,10 @@ namespace SokobanShroofs
                     counter = 0;
                     break;
             }
+<<<<<<< HEAD
             Console.CursorVisible = false;
+=======
+>>>>>>> b079bdd634192aca51c205a007f628b4469a771a
             while (true)                            //read keys and call menu with the selector on the new position
             {
                 var key = Console.ReadKey();
@@ -97,7 +110,10 @@ namespace SokobanShroofs
         }
         private static void ExecuteEnter(ref int counter)
         {
+<<<<<<< HEAD
             Console.CursorVisible = false;
+=======
+>>>>>>> b079bdd634192aca51c205a007f628b4469a771a
             switch (counter)
             {
                 case 0:
@@ -121,7 +137,11 @@ namespace SokobanShroofs
             while (true)
             {
                 Console.Clear();
+<<<<<<< HEAD
                 Console.CursorVisible = false;
+=======
+
+>>>>>>> b079bdd634192aca51c205a007f628b4469a771a
                 for (int i = 0; i < 4; i++)
                 {
                     Console.WriteLine();
@@ -154,7 +174,10 @@ namespace SokobanShroofs
         private static char[,] level;
         public static void StartGame_GetNextLevel()
         {
+<<<<<<< HEAD
 
+=======
+>>>>>>> b079bdd634192aca51c205a007f628b4469a771a
             try
             {
                 GetLevel(ref currentLevel);
@@ -292,11 +315,17 @@ namespace SokobanShroofs
             }
             if (counter==Targets.Length)
             {
+<<<<<<< HEAD
                 Console.WriteLine();
                 Console.WriteLine("Level beaten!");
                 currentLevel++;
                 levelBeaten = true;
                 Thread.Sleep(2500);
+=======
+                Console.WriteLine("Level beaten!");
+                currentLevel++;
+                levelBeaten = true;
+>>>>>>> b079bdd634192aca51c205a007f628b4469a771a
                 EndScreen.Win();
                 SokobanShroofs.StartGame_GetNextLevel();
             }

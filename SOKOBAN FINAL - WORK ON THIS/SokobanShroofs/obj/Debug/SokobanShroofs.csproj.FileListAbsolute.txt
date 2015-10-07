@@ -52,9 +52,12 @@ E:\SoftUni\1.Fundamental Level\Advanced C#\Game\SokobanShroofs\SOKOBAN FINAL - W
 E:\SoftUni\1.Fundamental Level\Advanced C#\Game\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.exe
 E:\SoftUni\1.Fundamental Level\Advanced C#\Game\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.pdb
 E:\SoftUni\1.Fundamental Level\Advanced C#\Game\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 D:\SoftUni\Advanced\Shroofs\SokobanShroofs\trunk\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.exe.config
 D:\SoftUni\Advanced\Shroofs\SokobanShroofs\trunk\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.exe
 D:\SoftUni\Advanced\Shroofs\SokobanShroofs\trunk\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.pdb
 D:\SoftUni\Advanced\Shroofs\SokobanShroofs\trunk\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.exe
 D:\SoftUni\Advanced\Shroofs\SokobanShroofs\trunk\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.pdb
 D:\SoftUni\Advanced\Shroofs\SokobanShroofs\trunk\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache
+=======
+>>>>>>> b079bdd634192aca51c205a007f628b4469a771a
