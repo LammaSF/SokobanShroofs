@@ -13,3 +13,6 @@ C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\SokNam
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\SokName\bin\Debug\SokName.exe
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\SokName\bin\Debug\SokName.pdb
 C:\Users\Ivan\Documents\GitHub\LammaRepo\SokobanShroofs\SokobanNameMerged\SokName\obj\Debug\SokName.csprojResolveAssemblyReference.cache
+D:\SoftUni\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\SokName\bin\Debug\SokName.exe.config
+D:\SoftUni\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\SokName\obj\Debug\SokName.exe
+D:\SoftUni\Advanced\Shroofs\SokobanShroofs\SokobanNameMerged\SokName\obj\Debug\SokName.pdb

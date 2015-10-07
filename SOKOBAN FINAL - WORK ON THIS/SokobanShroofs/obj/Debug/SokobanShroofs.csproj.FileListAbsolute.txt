@@ -61,3 +61,6 @@ D:\SoftUni\Advanced\Shroofs\SokobanShroofs\trunk\SOKOBAN FINAL - WORK ON THIS\So
 D:\SoftUni\Advanced\Shroofs\SokobanShroofs\trunk\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.csprojResolveAssemblyReference.cache
 =======
 >>>>>>> b079bdd634192aca51c205a007f628b4469a771a
+D:\SoftUni\Advanced\Shroofs\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\bin\Debug\SokobanShroofs.exe.config
+D:\SoftUni\Advanced\Shroofs\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.exe
+D:\SoftUni\Advanced\Shroofs\SokobanShroofs\SOKOBAN FINAL - WORK ON THIS\SokobanShroofs\obj\Debug\SokobanShroofs.pdb
