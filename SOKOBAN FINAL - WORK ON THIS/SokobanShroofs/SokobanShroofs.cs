@@ -304,22 +304,22 @@ namespace SokobanShroofs
                 int ballCounter = 0;
                 int targetCounter = 0;
 
-                char[] line = string.Join("", reader.ReadLine().Split()).ToCharArray();     // get dimensions - the first line of a level text file is always dimensions
-                level = new char[(int)Char.GetNumericValue(line[0]), (int)Char.GetNumericValue(line[1])];       //define the level playing field by those dimensions
+                string[] line = reader.ReadLine().Split();     // get dimensions - the first line of a level text file is always dimensions
+                level = new char[int.Parse(line[0]), int.Parse(line[1])];       //define the level playing field by those dimensions
                 //Balls = new Coordinate[(int)Char.GetNumericValue(line[2])];     // balls = 3rd digit of first line;
-                Targets = new Coordinate[(int)Char.GetNumericValue(line[2])];   // holes = 3rd digit of first line;
+                Targets = new Coordinate[int.Parse(line[2])];   // holes = 3rd digit of first line;
                 string getLine = reader.ReadLine();                         //read the first line of the playing field
                 while (getLine != null)
                 {
-                    line = line = string.Join("", getLine.Split()).ToCharArray();
+                    line = getLine.Split();
                     for (int i = 0; i < line.Length; i++)           // for every character on a single line
                     {
-                        if (line[i] == '#')                                 // if wall add to level playing field
+                        if (line[i] == "#")                                 // if wall add to level playing field
                         {
-                            level[lineNumber, i] = line[i];
+                            level[lineNumber,i] = line[i][0];    
                             continue;
                         }
-                        if (line[i] == '*')                                 //if ball add to Balls
+                        if (line[i] == "*")                                 //if ball add to Balls
                         {
                             //Balls[ballCounter++] = new Coordinate()
                             //{
@@ -327,10 +327,10 @@ namespace SokobanShroofs
                             //    Y = i
                             //};
                             ballCounter++;
-                            level[lineNumber, i] = line[i];
+                            level[lineNumber, i] = line[i][0];
                             continue;
                         }
-                        if (line[i] == 'X')                                 // X for hero starting position
+                        if (line[i] == "X")                                 // X for hero starting position
                         {
                             Hero = new Coordinate()
                             {
@@ -340,14 +340,14 @@ namespace SokobanShroofs
                             level[lineNumber, i] = '@';
                             continue;
                         }
-                        if (line[i] == 'O')                                 // if is target then add its coordinates to Targets
+                        if (line[i] == "O")                                 // if is target then add its coordinates to Targets
                         {
                             Targets[targetCounter++] = new Coordinate()
                             {
                                 X = lineNumber,
                                 Y = i
                             };
-                            level[lineNumber, i] = line[i];
+                            level[lineNumber, i] = line[i][0];
                         }
                     }
                     getLine = reader.ReadLine();
