@@ -11,6 +11,7 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
     {
         private static void resetGame()
         {
+            SokobanShroofs.score = 0;
             SokobanShroofs.currentLevel = 1;
             SokobanShroofs.levelBeaten = true;
         }
@@ -209,6 +210,10 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
                         Options.PrintOptions(ref Options.counterMoves);
                         break;
                     case 4:
+                        if(SokobanShroofs.score!=0)
+                        {
+                            HighScore.WriteNewHS();
+                        }
                         BasicMenu.resetGame();
                         BasicMenu.MenuPrint(ref BasicMenu.counter);
                         break;
@@ -251,7 +256,7 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
     }    
     class SokobanShroofs
     {
-        public static uint score = 90;
+        public static int score = 0;
         public static int currentLevel = 1;
         public static bool levelBeaten = true;
         public static Coordinate Hero { get; set; }
@@ -336,7 +341,8 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
             BasicMenu.counter = 0;
             levelBeaten = true;
             GetLevel(ref SokobanShroofs.currentLevel);
-            PrintLevel();
+            HighScore.WriteNewHS();
+            BasicMenu.MenuPrint(ref BasicMenu.counter);
         }
         private static void TryMove(int x, int y)
         {
@@ -514,7 +520,18 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
      }
     class HighScore
     {
-        public static Dictionary<string, int> scores = new Dictionary<string, int>();
+        public static List<player> highScores = new List<player>();
+        public struct player
+        {
+            public string name;
+            public int score;
+
+            public player(string name, int score)
+            {
+                this.name = name;
+                this.score = score;
+            }
+        }
         public static string TitleHighScore =       //this is ridiculous
             new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " +
             "h" + new string(' ', 3) + "h" + " " + "\n" +
@@ -529,23 +546,56 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
             new string(' ', Console.WindowWidth / 2 + 2) + new string(' ', 4) + "s" + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + " " + "r" + new string(' ', 3) + "e" + new string(' ', 4) + "\n" +
             new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " + "r" + new string(' ', 3) + "r" + " " + new string('e', 5);
 
-        static void WriteNewHS()
+        public static void WriteNewHS()
         {
-            using (var reader = new StreamReader("../../using/Score.txt"))
+            
+            using (var reader = new StreamReader("../../using/Score.txt"))      //get highscores from file to list<struct>
             {
                 string line = reader.ReadLine();
                 while (line != null)
                 {
                     string[] score = line.Split();
-                    scores.Add(score[0], int.Parse(score[1]));
-
+                    highScores.Add(new player(score[0], int.Parse(score[1])));
                     line = reader.ReadLine();
                 }
             }
-            var list = scores.Values.ToList();
-            list.Sort();
+            highScores.Add(new player(GetName(), SokobanShroofs.score));         //add current player's score
+            using (var writer = new StreamWriter("../../using/Score.txt"))
+            {
+                for (int i = 0; i < highScores.Count- 1; i++)
+                {
+                    int j = i + 1;
+
+                    while (j > 0)
+                    {
+                        if (highScores[j - 1].score > highScores[j].score)
+                        {
+                            player swapPlayer = highScores[j - 1];
+                            highScores[j - 1] = highScores[j];
+                            highScores[j]= swapPlayer;
+
+                        }
+                        j--;
+                    }
+                }
+                foreach (var element in highScores)
+                {
+                    writer.WriteLine(element.name + " " + element.score);
+                }
+            }
 
 
+        }
+        public static string GetName()
+        {
+            Console.Write("Pick a name between 4 and 10 characters:");
+            string name = Console.ReadLine();
+            while(name.Length<4||name.Length>10)
+            {
+                Console.Write("Pick name between 4 and 10 characters:");
+                name = Console.ReadLine();
+            }
+            return name;
         }
         public static void PrintHighScore()
         {
@@ -574,8 +624,7 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
                     while (line != null)
                     {
 
-                        string[] score = line.Split();
-                        scores.Add(score[0],int.Parse(score[1]));
+                        
                         Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (line.Length / 2)) + "}", line);
 
 
