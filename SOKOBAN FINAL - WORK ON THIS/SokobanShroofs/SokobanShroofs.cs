@@ -2,6 +2,8 @@
 using System.IO;
 
 using System.Threading;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this check
 {
@@ -15,7 +17,6 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
         public static int counter = 0;
         static void Main()
         {
-
             Console.CursorVisible = false;
             MenuPrint(ref counter);
         }
@@ -181,7 +182,7 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
                         HighScore.PrintHighScore();
                         break;
                     case 2:
-                        Options.PrintOptions(ref counter);
+                        Options.PrintOptions(ref Options.counterMoves);
                         break;
                     case 3:
                         QuitPrompt();
@@ -202,7 +203,7 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
                         HighScore.PrintHighScore();
                         break;
                     case 3:
-                        Options.PrintOptions(ref counter);
+                        Options.PrintOptions(ref Options.counterMoves);
                         break;
                     case 4:
                         BasicMenu.resetGame();
@@ -247,7 +248,7 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
     }    
     class SokobanShroofs
     {
-        public static uint score = 0;
+        public static uint score = 90;
         public static int currentLevel = 1;
         public static bool levelBeaten = true;
         public static Coordinate Hero { get; set; }
@@ -510,6 +511,7 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
      }
     class HighScore
     {
+        public static Dictionary<string, int> scores = new Dictionary<string, int>();
         public static string TitleHighScore =       //this is ridiculous
             new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " +
             "h" + new string(' ', 3) + "h" + " " + "\n" +
@@ -523,10 +525,23 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
             new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + "c" + new string(' ', 4) + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string('r', 4) + " " + new string('e', 5) + "\n" +
             new string(' ', Console.WindowWidth / 2 + 2) + new string(' ', 4) + "s" + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + " " + "r" + new string(' ', 3) + "e" + new string(' ', 4) + "\n" +
             new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " + "r" + new string(' ', 3) + "r" + " " + new string('e', 5);
-        
-        public static void CheckScore(int score)
+
+        static void WriteNewHS()
         {
-            
+            using (var reader = new StreamReader("../../using/Score.txt"))
+            {
+                string line = reader.ReadLine();
+                while (line != null)
+                {
+                    string[] score = line.Split();
+                    scores.Add(score[0], int.Parse(score[1]));
+
+                    line = reader.ReadLine();
+                }
+            }
+            var list = scores.Values.ToList();
+            list.Sort();
+
 
         }
         public static void PrintHighScore()
@@ -544,7 +559,11 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
                     string line = reader.ReadLine();
                     while (line != null)
                     {
+
+                        string[] score = line.Split();
+                        scores.Add(score[0],int.Parse(score[1]));
                         Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (line.Length / 2)) + "}", line);
+
 
                         line = reader.ReadLine();
                     }
@@ -636,7 +655,7 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
             if (key.Key == ConsoleKey.DownArrow) return ++counterMoves;
             if (key.Key == ConsoleKey.UpArrow) return --counterMoves;
             if (key.Key == ConsoleKey.Enter) OptionsEnter(ref counterMoves);
-            if (key.Key == ConsoleKey.Escape) Console.Clear(); BasicMenu.MenuPrint(ref BasicMenu.counter);
+            if (key.Key == ConsoleKey.Escape) BasicMenu.MenuPrint(ref BasicMenu.counter);
 
             return counterMoves;
         }
@@ -661,6 +680,9 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
                     Console.BackgroundColor = ConsoleColor.White;
                     Console.ForegroundColor = ConsoleColor.Black;
                     break;
+                case 4:
+                    BasicMenu.MenuPrint(ref BasicMenu.counter);
+                    break;
             }
         }
 
@@ -678,39 +700,53 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
             string cyanColor = "Cyan Background";
             string blackColor = "Black Background";
             string whiteColor = "White Background";
-            switch (counterMoves) //we have 4 options so we have to restrain the selector to them
+            string mMenu = "Main menu";
+            switch (counterMoves) //we have 5 options so we have to restrain the selector to them
             {
 
                 case 0:
-                case 4:
+                case 5:
                     //0 and 4 because we want the selector to loop and go to the first option after hitting downArrow from last
                     counterMoves = 0;
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", "-> " + redColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", cyanColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", blackColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", whiteColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (mMenu.Length / 2)) + "}", mMenu);
                     break;
                 case 1:
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", redColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", "-> " + cyanColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", blackColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", whiteColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (mMenu.Length / 2)) + "}", mMenu);
                     break;
                 case 2:
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", redColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", cyanColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", "-> " + blackColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", whiteColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (mMenu.Length / 2)) + "}", mMenu);
                     break;
                 case 3:
-                case -1:
-                    //3 and -1 because we want the selector to loop and go to the last option after hitting upArrow from first
-                    counterMoves = 3;
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", redColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", cyanColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", blackColor);
                     Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}", "-> " + whiteColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (mMenu.Length / 2)) + "}", mMenu);
                     break;
+                case 4:
+                case -1:
+
+                    //4 and -1 because we want the selector to loop and go to the last option after hitting upArrow from first
+                    counterMoves = 4;
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (redColor.Length / 2)) + "}", redColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (cyanColor.Length / 2)) + "}", cyanColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (blackColor.Length / 2)) + "}", blackColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (whiteColor.Length / 2)) + "}",  whiteColor);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (mMenu.Length / 2)) + "}", "-> " + mMenu);
+                    break;
+
                 default:
                     counterMoves = 0;
                     break;

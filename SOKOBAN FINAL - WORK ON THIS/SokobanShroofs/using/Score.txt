@@ -1,10 +1,10 @@
-1 Player 000
-2 Player 000
-3 Player 000
-4 Player 000
-5 Player 000
-6 Player 000
-7 Player 000
-8 Player 000
-9 Player 000
-10 Player 000
+Player 190
+Player 150
+Player 110
+Player 70
+Player 40
+Player 000
+Player 000
+Player 000
+Player 000
+Player 000
