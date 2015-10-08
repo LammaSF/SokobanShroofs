@@ -1,0 +1,5 @@
+   OOO    PPPPPPPPP TTTTTTTTT IIIIIIIIII    OOO    NN    NN SSSSSSSS
+ OO   OO  PP     PP    TT         II      OO   OO  NNN   NN SS
+OO     OO PPPPPPPPP    TT         II     OO     OO NN NN NN SSSSSSSS
+ OO   OO  PP           TT         II      OO   OO  NN   NNN       SS
+   OOO    PP           TT     IIIIIIIIII    OOO    NN    NN SSSSSSSS

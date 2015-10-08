@@ -1,0 +1,5 @@
+WW      WW     II     NN    NN
+WW      WW     II     NNN   NN
+WW      WW     II     NN NN NN
+ WW WW WW      II     NN   NNN
+  WW  WW       II     NN    NN
