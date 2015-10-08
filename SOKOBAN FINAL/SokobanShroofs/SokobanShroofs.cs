@@ -532,20 +532,7 @@ namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this 
                 this.score = score;
             }
         }
-        public static string TitleHighScore =       //this is ridiculous
-            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " +
-            "h" + new string(' ', 3) + "h" + " " + "\n" +
-            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + new string(' ', 3) + "g" + " " + "h" + new string(' ', 3) + "h" + "\n" +
-            new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('h', 5) + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + new string(' ', 4) + " " + new string('h', 5) + "\n" +
-            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + " " + new string('g', 3) + " " + "h" + new string(' ', 3) + "h" + "\n" +
-            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " + "h" + new string(' ', 3) + "h" + "\n" +
-            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " +
-            new string('r', 5) + " " + new string('e', 5) + "\n" +
-            new string(' ', Console.WindowWidth / 2 + 2) + "s" + new string(' ', 4) + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string(' ', 3) + "r" + " " + "e" + new string(' ', 4) + "\n" +
-            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + "c" + new string(' ', 4) + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string('r', 4) + " " + new string('e', 5) + "\n" +
-            new string(' ', Console.WindowWidth / 2 + 2) + new string(' ', 4) + "s" + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + " " + "r" + new string(' ', 3) + "e" + new string(' ', 4) + "\n" +
-            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " + "r" + new string(' ', 3) + "r" + " " + new string('e', 5);
-
+       
         public static void WriteNewHS()
         {
             
