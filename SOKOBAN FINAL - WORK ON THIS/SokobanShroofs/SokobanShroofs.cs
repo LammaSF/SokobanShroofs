@@ -3,7 +3,7 @@ using System.IO;
 
 using System.Threading;
 
-namespace SokobanShroofs
+namespace SokobanShroofs    // HighScore>CheckScore think of a way to make this check
 {
     class BasicMenu
     {
@@ -17,7 +17,7 @@ namespace SokobanShroofs
         {
 
             Console.CursorVisible = false;
-            MainMenuPrint(ref counter);
+            MenuPrint(ref counter);
         }
         public static int ReadKey(ConsoleKeyInfo key, ref int counter)
         {
@@ -29,12 +29,113 @@ namespace SokobanShroofs
                 else
                 {
                     resetGame();
-                    MainMenuPrint(ref counter);
+                    MenuPrint(ref counter);
                 }
 
             return counter;
         }
-        public static void MainMenuPrint(ref int counter)
+        private static void MMenuPrint(ref int counter)
+        {
+            string nGame = "New game";
+            string hScores = "High scores";
+            string options = "Options";
+            string quit = "Quit";
+            switch (counter) //we have 4 options so we have to restrain the selector to them
+            {
+
+                case 0:
+                case 4:
+                    //0 and 4 because we want the selector to loop and go to the first option after hitting downArrow from last
+                    counter = 0;
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", "-> " + nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
+                    break;
+                case 1:
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", "-> " + hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
+                    break;
+                case 2:
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", "-> " + options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
+                    break;
+                case 3:
+                case -1:
+                    //3 and -1 because we want the selector to loop and go to the last option after hitting upArrow from first
+                    counter = 3;
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", "-> " + quit);
+                    break;
+                default:
+                    counter = 0;
+                    break;
+            }
+        }
+        private static void PMenuPrint(ref int counter)
+        {
+            string nGame = "Resume game";
+            string resetGame = "Restart level";
+            string hScores = "High scores";
+            string options = "Options";
+            string quit = "Main menu";
+            switch (counter) //we have 4 options so we have to restrain the selector to them
+            {
+
+                case 0:
+                case 5:
+                    //0 and 4 because we want the selector to loop and go to the first option after hitting downArrow from last
+                    counter = 0;
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", "-> " + nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", resetGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
+                    break;
+                case 1:
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", "-> " + resetGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
+                    break;
+                case 2:
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", resetGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", "-> " + hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
+                    break;
+                case 3:
+                    //3 and -1 because we want the selector to loop and go to the last option after hitting upArrow from first
+                    counter = 3;
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", resetGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", "-> " + options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
+                    break;
+                case 4:
+                case -1:
+                    counter = 4;
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", resetGame);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
+                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", "-> " + quit);
+                    break;
+                default:
+                    counter = 0;
+                    break;
+            }
+        }
+        public static void MenuPrint(ref int counter)
         {
             Console.Clear();
 
@@ -50,106 +151,9 @@ namespace SokobanShroofs
             Console.WriteLine(name);
             Console.WriteLine();
             Console.WriteLine();
-            if (SokobanShroofs.levelBeaten)
-            {
-                string nGame = "New game";
-                string hScores = "High scores";
-                string options = "Options";
-                string quit = "Quit";
-                switch (counter) //we have 4 options so we have to restrain the selector to them
-                {
 
-                    case 0:
-                    case 4:
-                        //0 and 4 because we want the selector to loop and go to the first option after hitting downArrow from last
-                        counter = 0;
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", "-> " + nGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
-                        break;
-                    case 1:
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", "-> " + hScores);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
-                        break;
-                    case 2:
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", "-> " + options);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
-                        break;
-                    case 3:
-                    case -1:
-                        //3 and -1 because we want the selector to loop and go to the last option after hitting upArrow from first
-                        counter = 3;
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", "-> " + quit);
-                        break;
-                    default:
-                        counter = 0;
-                        break;
-                }
-            }
-            else
-            {
-                string nGame = "Resume game";
-                string resetGame = "Restart level";
-                string hScores = "High scores";
-                string options = "Options";
-                string quit = "Main menu";
-                switch (counter) //we have 4 options so we have to restrain the selector to them
-                {
-
-                    case 0:
-                    case 5:
-                        //0 and 4 because we want the selector to loop and go to the first option after hitting downArrow from last
-                        counter = 0;
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", "-> " + nGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}",resetGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
-                        break;
-                    case 1:
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", "-> " + resetGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
-                        break;
-                    case 2:
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", resetGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", "-> " + hScores);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}",options);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
-                        break;
-                    case 3:
-                        //3 and -1 because we want the selector to loop and go to the last option after hitting upArrow from first
-                        counter = 3;
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", resetGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", "-> " + options);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", quit);
-                        break;
-                    case 4:
-                    case -1:
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", nGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nGame.Length / 2)) + "}", resetGame);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (hScores.Length / 2)) + "}", hScores);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (options.Length / 2)) + "}", options);
-                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (quit.Length / 2)) + "}", "-> " + quit);
-                        break;
-                    default:
-                        counter = 0;
-                        break;
-                }
-            }
+            if (SokobanShroofs.levelBeaten) MMenuPrint(ref counter);    //if current level is not beaten(game has not started yet) get Main menu
+            else PMenuPrint(ref counter);                               //else get Pause menu
 
             Console.CursorVisible = false;
 
@@ -159,7 +163,7 @@ namespace SokobanShroofs
 
                 Console.Clear();
                 ReadKey(key, ref counter);
-                MainMenuPrint(ref counter);
+                MenuPrint(ref counter);
             }
         }
         private static void ExecuteEnter(ref int counter)
@@ -202,7 +206,7 @@ namespace SokobanShroofs
                         break;
                     case 4:
                         BasicMenu.resetGame();
-                        BasicMenu.MainMenuPrint(ref BasicMenu.counter);
+                        BasicMenu.MenuPrint(ref BasicMenu.counter);
                         break;
                 }
             }
@@ -234,7 +238,7 @@ namespace SokobanShroofs
                     case ConsoleKey.N:
                     case ConsoleKey.Escape:
                         Console.Clear();
-                        MainMenuPrint(ref counter);
+                        MenuPrint(ref counter);
                         break;
                 }
                 break;
@@ -243,6 +247,7 @@ namespace SokobanShroofs
     }    
     class SokobanShroofs
     {
+        public static uint score = 0;
         public static int currentLevel = 1;
         public static bool levelBeaten = true;
         public static Coordinate Hero { get; set; }
@@ -290,7 +295,7 @@ namespace SokobanShroofs
                         ResetPrompt();
                         break;
                     case ConsoleKey.Escape:
-                        BasicMenu.MainMenuPrint(ref BasicMenu.counter);
+                        BasicMenu.MenuPrint(ref BasicMenu.counter);
                         break;
 
                 }
@@ -323,6 +328,7 @@ namespace SokobanShroofs
         }
         private static void LevelReset()
         {
+
             BasicMenu.counter = 0;
             levelBeaten = true;
             GetLevel(ref SokobanShroofs.currentLevel);
@@ -336,6 +342,7 @@ namespace SokobanShroofs
                 level[Hero.X, Hero.Y] = default(char);
                 Hero.X += x;
                 Hero.Y += y;
+                score++;
             }
             else if (level[Hero.X + x, Hero.Y + y] == '*')                                                  // if its * check
             {
@@ -355,6 +362,7 @@ namespace SokobanShroofs
                     level[Hero.X, Hero.Y] = default(char);
                     Hero.X += x;
                     Hero.Y += y;
+                    score++;
                 }
                 //those are the only two options when its allowed for us to move => no need to check anything else 
 
@@ -501,54 +509,59 @@ namespace SokobanShroofs
         }
      }
     class HighScore
+    {
+        public static string TitleHighScore =       //this is ridiculous
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " +
+            "h" + new string(' ', 3) + "h" + " " + "\n" +
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + new string(' ', 3) + "g" + " " + "h" + new string(' ', 3) + "h" + "\n" +
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('h', 5) + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + new string(' ', 4) + " " + new string('h', 5) + "\n" +
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + " " + new string('g', 3) + " " + "h" + new string(' ', 3) + "h" + "\n" +
+            new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " + "h" + new string(' ', 3) + "h" + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " +
+            new string('r', 5) + " " + new string('e', 5) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + "s" + new string(' ', 4) + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string(' ', 3) + "r" + " " + "e" + new string(' ', 4) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + "c" + new string(' ', 4) + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string('r', 4) + " " + new string('e', 5) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + new string(' ', 4) + "s" + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + " " + "r" + new string(' ', 3) + "e" + new string(' ', 4) + "\n" +
+            new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " + "r" + new string(' ', 3) + "r" + " " + new string('e', 5);
+        
+        public static void CheckScore(int score)
         {
-            public static string TitleHighScore =       //this is ridiculous
-               new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " +
-               "h" + new string(' ', 3) + "h" + " " + "\n" +
-               new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + new string(' ', 3) + "g" + " " + "h" + new string(' ', 3) + "h" + "\n" +
-               new string(' ', Console.WindowWidth / 2 - 42 / 2) + new string('h', 5) + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + new string(' ', 4) + " " + new string('h', 5) + "\n" +
-               new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string(' ', 2) + "i" + new string(' ', 2) + " " + "g" + " " + new string('g', 3) + " " + "h" + new string(' ', 3) + "h" + "\n" +
-               new string(' ', Console.WindowWidth / 2 - 42 / 2) + "h" + new string(' ', 3) + "h" + " " + new string('i', 5) + " " + new string('g', 5) + " " + "h" + new string(' ', 3) + "h" + "\n" +
-               new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " +
-               new string('r', 5) + " " + new string('e', 5) + "\n" +
-               new string(' ', Console.WindowWidth / 2 + 2) + "s" + new string(' ', 4) + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string(' ', 3) + "r" + " " + "e" + new string(' ', 4) + "\n" +
-               new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + "c" + new string(' ', 4) + " " + "o" + new string(' ', 3) + "o" + " " + "r" + new string('r', 4) + " " + new string('e', 5) + "\n" +
-               new string(' ', Console.WindowWidth / 2 + 2) + new string(' ', 4) + "s" + " " + "c" + new string(' ', 3) + "c" + " " + "o" + new string(' ', 3) + "o" + " " + "r" + " " + "r" + new string(' ', 3) + "e" + new string(' ', 4) + "\n" +
-               new string(' ', Console.WindowWidth / 2 + 2) + new string('s', 5) + " " + new string('c', 5) + " " + new string('o', 5) + " " + "r" + new string(' ', 3) + "r" + " " + new string('e', 5);
+            
 
-            public static void PrintHighScore()
+        }
+        public static void PrintHighScore()
+        {
+            while (true)
             {
-                while (true)
+                Console.Clear();
+                Console.WriteLine(TitleHighScore);
+                Console.WriteLine();
+                string nameScore = "\tName\tScore";
+                Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nameScore.Length / 2)) + "}", nameScore);
+
+                using (var reader = new StreamReader("../../using/Score.txt"))
+                {
+                    string line = reader.ReadLine();
+                    while (line != null)
+                    {
+                        Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (line.Length / 2)) + "}", line);
+
+                        line = reader.ReadLine();
+                    }
+                }
+                string prompt = "Pres ESC for main manu.";
+                Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (prompt.Length / 2)) + "}", prompt);
+                ConsoleKeyInfo result = Console.ReadKey(true);
+
+                if (result.Key == ConsoleKey.Escape)
                 {
                     Console.Clear();
-                    Console.WriteLine(TitleHighScore);
-                    Console.WriteLine();
-                    string nameScore = "\tName\tScore";
-                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (nameScore.Length / 2)) + "}", nameScore);
+                    BasicMenu.MenuPrint(ref BasicMenu.counter);
 
-                    using (var reader = new StreamReader("../../using/Score.txt"))
-                    {
-                        string line = reader.ReadLine();
-                        while (line != null)
-                        {
-                            Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (line.Length / 2)) + "}", line);
-
-                            line = reader.ReadLine();
-                        }
-                    }
-                    string prompt = "Pres ESC for main manu.";
-                    Console.WriteLine("{0," + ((Console.WindowWidth / 2) + (prompt.Length / 2)) + "}", prompt);
-                    ConsoleKeyInfo result = Console.ReadKey(true);
-
-                    if (result.Key == ConsoleKey.Escape)
-                    {
-                        Console.Clear();
-                        BasicMenu.MainMenuPrint(ref BasicMenu.counter);
-
-                    }
                 }
             }
         }
+    }
     class EndScreen
     {
         public static int counter = 0; //this too is ridiculous
@@ -623,7 +636,7 @@ namespace SokobanShroofs
             if (key.Key == ConsoleKey.DownArrow) return ++counterMoves;
             if (key.Key == ConsoleKey.UpArrow) return --counterMoves;
             if (key.Key == ConsoleKey.Enter) OptionsEnter(ref counterMoves);
-            if (key.Key == ConsoleKey.Escape) Console.Clear(); BasicMenu.MainMenuPrint(ref BasicMenu.counter);
+            if (key.Key == ConsoleKey.Escape) Console.Clear(); BasicMenu.MenuPrint(ref BasicMenu.counter);
 
             return counterMoves;
         }

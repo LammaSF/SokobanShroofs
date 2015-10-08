@@ -1,11 +1,10 @@
-01	Player	000
-02	Player	000
-03	Player	000
-04	Player	000
-05	Player	000
-06	Player	000
-07	Player	000
-08	Player	000
-09	Player	000
-10	Player	000
-
+1 Player 000
+2 Player 000
+3 Player 000
+4 Player 000
+5 Player 000
+6 Player 000
+7 Player 000
+8 Player 000
+9 Player 000
+10 Player 000
